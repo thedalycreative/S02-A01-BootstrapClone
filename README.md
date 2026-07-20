@@ -1,6 +1,10 @@
-# 🌲✨ Harry Potter: A Forbidden Forest Experience — Bootstrap 5 Rebuild
+# 🌲✨ Harry Potter: A Forbidden Forest Experience — 
+## Bootstrap Clone A Website Activity
+### by [Tim Daly](https://thedalycreative.com)
 
 ![HTML5](assets/styleguide/badges/html5.svg) ![CSS3](assets/styleguide/badges/css3.svg) ![Bootstrap 5](assets/styleguide/badges/bootstrap5.svg)
+
+![Forbidden Forest Animated Banner](assets/styleguide/forbidden-forest-preview.gif)
 
 Hey! This is our Bootstrap 5 rebuild of **Harry Potter: A Forbidden Forest Experience**
 ([hpforbiddenforestexperience.com](https://hpforbiddenforestexperience.com/)) — a nighttime forest trail
@@ -8,6 +12,18 @@ site made of glowing mushrooms, drifting fireflies and parchment-gold buttons. H
 
 > 💡 **Live Preview tip:** in VS Code, press `Ctrl/Cmd + Shift + V` for Markdown preview, or open
 > `index.html` with the Live Server extension.
+
+---
+
+## 📸 Visual Showcase & Screenshots
+
+| Bootstrap 5 Clone Preview | Hero Video Desktop Poster |
+| :---: | :---: |
+| ![Bootstrap 5 Clone Screenshot](assets/styleguide/screenshots/clone-fullpage.jpeg) | ![Hero Video Desktop Poster](assets/02-hero/videos/02-hero-video-poster-desktop-1080x608.webp) |
+
+| Live Site Reference | Parallax Glowing Moon |
+| :---: | :---: |
+| ![Live Site Reference](assets/styleguide/screenshots/live-fullpage.jpeg) | ![Parallax Moon Asset](assets/03-intro/images/03-parallax-moon-466x466.webp) |
 
 ---
 
@@ -19,12 +35,14 @@ site made of glowing mushrooms, drifting fireflies and parchment-gold buttons. H
 4. **Bootstrap Rebuild:** Rebuilt the site with Bootstrap 5.3.3 and a custom `css/styles.css` brand layer.
 5. **Verification:** Validated layout and visual consistency against the live site (see [`verification-report.md`](verification-report.md)).
 
+---
+
 ## 📥 Getting the Files from GitHub
 
-Repository URL: [https://github.com/thedalycreative/s02-a01-BootstrapClone-2613](https://github.com/thedalycreative/s02-a01-BootstrapClone-2613)
+Repository URL: [https://github.com/thedalycreative/S02-A01-BootstrapClone](https://github.com/thedalycreative/S02-A01-BootstrapClone)
 
 ### Option 1: Download as ZIP
-1. Visit the repository on GitHub: [https://github.com/thedalycreative/s02-a01-BootstrapClone-2613](https://github.com/thedalycreative/s02-a01-BootstrapClone-2613)
+1. Visit the repository on GitHub: [https://github.com/thedalycreative/S02-A01-BootstrapClone](https://github.com/thedalycreative/S02-A01-BootstrapClone)
 2. Click the green **Code** button at the top right of the file list.
 3. Click **Download ZIP** from the dropdown menu.
 4. Extract the downloaded ZIP archive on your computer.
@@ -34,10 +52,10 @@ Open your terminal (macOS/Linux) or Command Prompt / PowerShell (Windows) and ru
 
 ```bash
 # Clone the repository
-git clone https://github.com/thedalycreative/s02-a01-BootstrapClone-2613.git
+git clone https://github.com/thedalycreative/S02-A01-BootstrapClone.git
 
 # Change into the project directory
-cd s02-a01-BootstrapClone-2613
+cd S02-A01-BootstrapClone
 ```
 
 ---
@@ -65,7 +83,7 @@ S02-A01-BootstrapClone/
 ├── assets/07-press/        ← 6 outlet logos
 ├── assets/08-sorting-hat/  ← sorting hat image
 ├── assets/10-footer/       ← WB + Fever partner logos, treeline
-└── assets/styleguide/      ← badges, boards, diagrams
+└── assets/styleguide/      ← badges, boards, diagrams, screenshots & gifs
 ```
 
 ---
@@ -98,6 +116,8 @@ Handy tools: [imagecolorpicker.com](https://imagecolorpicker.com) ·
 [htmlcolorcodes.com](https://htmlcolorcodes.com) ·
 [W3Schools colour picker](https://www.w3schools.com/colors/colors_picker.asp)
 
+---
+
 ## 🔤 Typography
 
 ![Typography specimen board](assets/styleguide/fonts.svg)
@@ -119,6 +139,8 @@ The site self-hosts two families (we fetched the same `.woff2` files into `asset
 No Google-Font swap was needed — the real brand fonts were fetchable; `Georgia, serif` and
 `Helvetica, Arial, sans-serif` are the declared fallbacks.
 
+---
+
 ## 🧬 Component DNA
 
 ![Component DNA board](assets/styleguide/components.svg)
@@ -131,6 +153,8 @@ No Google-Font swap was needed — the real brand fonts were fetchable; `Georgia
 - **Press card** — ice `#a3e6ef`, `radius 32px`, `padding 32px 40px`.
 - **Containers** — capped at `75rem` (1200px) like the original `.container`.
 
+---
+
 ## 🧩 Section-by-Section Teardown
 
 ### 01 · Navbar
@@ -138,6 +162,8 @@ No Google-Font swap was needed — the real brand fonts were fetchable; `Georgia
 - `fixed-top`, 72px tall, pure black; 77×50 logo left, `en → fr/nl` dropdown right; container capped at 75rem.
 
 ![Navbar diagram](assets/styleguide/diagrams/navbar-structure.svg)
+
+---
 
 ### 02 · Hero — the video layer stack
 [Utilities: position](https://getbootstrap.com/docs/5.3/utilities/position/) · [MDN `<video>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video) · [W3Schools object-fit](https://www.w3schools.com/css/css3_object-fit.asp)
@@ -156,17 +182,27 @@ No Google-Font swap was needed — the real brand fonts were fetchable; `Georgia
 
 ![Hero video stack](assets/styleguide/diagrams/hero-video-stack.svg)
 
+---
+
 ### 03 · Intro — starfield + masked moon
 [Utilities: display/flex](https://getbootstrap.com/docs/5.3/utilities/flex/) · [MDN mask-image](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-image) · [MDN background-attachment](https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment)
 - **The trick** — `background-attachment: fixed` starfield gives free parallax; the 300×300 moon sits at
   `z-index:-1` behind the copy inside a container masked by
   `linear-gradient(0deg, transparent 10%, black 20%, black 80%, transparent)` so it melts into the sky.
 
+---
+
 ### 04 · Milestones
 [Grid: row-cols](https://getbootstrap.com/docs/5.3/layout/grid/#row-columns) · [W3Schools grid](https://www.w3schools.com/bootstrap5/bootstrap_grid_basic.php)
 - `row-cols-1 row-cols-md-3 g-4`; each stat in a bordered card (1px ice ring, radius 32px, padding 16px).
 
-### 05–06 · City selector / Past experiences
+| Cities Stat | Trees Stat | Visitors Stat |
+| :---: | :---: | :---: |
+| <img src="assets/04-milestones/images/04-stat-cities-900x900.webp" width="120" alt="Cities Stat"> | <img src="assets/04-milestones/images/04-stat-trees-900x900.webp" width="120" alt="Trees Stat"> | <img src="assets/04-milestones/images/04-stat-visitors-900x900.webp" width="120" alt="Visitors Stat"> |
+
+---
+
+### 05–06 · City Selector / Past Experiences
 [Grid breakpoints](https://getbootstrap.com/docs/5.3/layout/breakpoints/) · [MDN flex-wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)
 - 16 tiles: `row-cols-2 → row-cols-md-3 → row-cols-xl-5`, matching the live 47% → 30% → 20% tile widths.
 - **The trick** — the chip is absolutely positioned against the tile wrapper, not the image, so the ring's
@@ -175,19 +211,41 @@ No Google-Font swap was needed — the real brand fonts were fetchable; `Georgia
 ![City tile anatomy](assets/styleguide/diagrams/city-tile-anatomy.svg)
 ![Responsive grid stacking](assets/styleguide/diagrams/responsive-grid.svg)
 
+#### 🌆 Featured Experience Locations Showcase
+
+| Perth (Active) | Singapore | Melbourne | Chicago | Cheshire | Austin |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| <img src="assets/05-city-selector/images/05-city-perth-250x250.png" width="120" alt="Perth"> | <img src="assets/06-finished-experiences/images/06-city-singapore-250x250.png" width="120" alt="Singapore"> | <img src="assets/06-finished-experiences/images/06-city-melbourne-250x250.png" width="120" alt="Melbourne"> | <img src="assets/06-finished-experiences/images/06-city-chicago-250x250.png" width="120" alt="Chicago"> | <img src="assets/06-finished-experiences/images/06-city-cheshire-250x250.png" width="120" alt="Cheshire"> | <img src="assets/06-finished-experiences/images/06-city-austin-250x250.png" width="120" alt="Austin"> |
+
+---
+
 ### 07 · Press
 [Carousel](https://getbootstrap.com/docs/5.3/components/carousel/) · [MDN `<figure>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
 - 6 outlet cards (Urban List, Time Out, Concrete Playground, Sunrise, Channel 9, 10 News First) as ice-blue
   `figure` cards inside a Bootstrap carousel — 2 slides × 3 cards, yellow active dot.
 
+#### 📰 Featured Media Outlets
+
+| Urban List | Time Out | Concrete Playground | Sunrise | Channel 9 | 10 News First |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| <img src="assets/07-press/images/07-press-urban-list-273x100.png" height="35" alt="Urban List"> | <img src="assets/07-press/images/07-press-time-out-263x100.png" height="35" alt="Time Out"> | <img src="assets/07-press/images/07-press-concrete-playground-453x100.png" height="35" alt="Concrete Playground"> | <img src="assets/07-press/images/07-press-sunrise-188x100.png" height="35" alt="Sunrise"> | <img src="assets/07-press/images/07-press-channel9-295x50.png" height="25" alt="Channel 9"> | <img src="assets/07-press/images/07-press-10-news-first-100x100.png" height="35" alt="10 News First"> |
+
+---
+
 ### 08 · Sorting Hat
 [Buttons](https://getbootstrap.com/docs/5.3/components/buttons/) — heading + flourish + gold pill CTA to the official quiz.
 
-### 09 · Firefly effect
+---
+
+### 09 · Firefly Effect
 [MDN @keyframes](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes)
 - **The trick** — each `.firefly` is a dot whose `::before`/`::after` orbit via `transform-origin: -10vw`
   (`drift`), while `flash` pops a `#c9f8fe` box-shadow glow; three authored wander paths are shared across
   nine elements with `:nth-child` offsets.
+
+![Drifting Fireflies Animation](assets/styleguide/fireflies-glow.gif)
+
+---
 
 ### 10 · Footer
 [Flex utilities](https://getbootstrap.com/docs/5.3/utilities/flex/) · [MDN `<footer>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer)
@@ -195,8 +253,18 @@ No Google-Font swap was needed — the real brand fonts were fetchable; `Georgia
 
 ![Footer structure](assets/styleguide/diagrams/footer-structure.svg)
 
+#### 🤝 Official Partners
+
+| Warner Bros. Discovery | Fever |
+| :---: | :---: |
+| <img src="assets/10-footer/images/10-partner-wb-150x155.png" height="60" alt="Warner Bros"> | <img src="assets/10-footer/images/10-partner-fever-552x170.svg" height="40" alt="Fever"> |
+
+---
+
 ### 11 · Cookie banner
 [Alerts](https://getbootstrap.com/docs/5.3/components/alerts/) — fixed-bottom dismissible alert standing in for the OneTrust widget.
+
+---
 
 ## 📁 Section Number Key
 
@@ -213,6 +281,8 @@ No Google-Font swap was needed — the real brand fonts were fetchable; `Georgia
 red/white = video · white/dark = logo — each in landscape/portrait/square/banner/thumb with an X-cross
 and centred dimension label. None are used in the page (every slot has its real asset).
 
+---
+
 ## 🔮 Tone & Branding
 
 Midnight woodland after the park closes: near-black navy skies, an icy Patronus-blue glow on every
@@ -223,6 +293,8 @@ slow and organic — fireflies drift, stars hold still, nothing bounces.
 `header/nav/section/footer/figure` · alt text on every image.
 **Don't:** no inline `style=` attributes · no images without alt text · no new accent colours — if it isn't
 ice, gold or parchment, it isn't brand.
+
+---
 
 ## 📌 Media Sources & Manual Follow-ups
 
