@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 800" width="450" height="800">
+<rect width="450" height="800" fill="#b00020"/>
+<line x1="0" y1="0" x2="450" y2="800" stroke="#ffffff" stroke-width="4"/>
+<line x1="450" y1="0" x2="0" y2="800" stroke="#ffffff" stroke-width="4"/>
+<rect x="95.0" y="366.0" width="260" height="68" fill="#b00020" stroke="#ffffff" stroke-width="3"/>
+<text x="225.0" y="394.0" fill="#ffffff" font-family="Arial, sans-serif" font-size="26" font-weight="bold" text-anchor="middle">VIDEO</text>
+<text x="225.0" y="422.0" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" text-anchor="middle">450 x 800</text>
+</svg>

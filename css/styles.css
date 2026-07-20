@@ -1,0 +1,493 @@
+/* ==========================================================================
+   CSS TABLE OF CONTENTS
+   --------------------------------------------------------------------------
+   SECTION 00: UNIVERSAL / ROOT  — variables, fonts, reset, type scale, buttons
+   SECTION 01: NAVBAR STYLING    — fixed black bar, logo, language selector
+   SECTION 02: HERO STYLING      — video layer stack, overlay content, icons
+   SECTION 03: INTRO STYLING     — fixed starfield, parallax moon, ice title
+   SECTION 04: MILESTONES        — navy gradient, stat medallions
+   SECTION 05: CITY SELECTOR     — navy panel, city tiles, status chips
+   SECTION 06: FINISHED EXPERIENCES — same tile DNA, red chips
+   SECTION 07: PRESS             — reverse gradient, carousel cards
+   SECTION 08: SORTING HAT       — centered CTA block
+   SECTION 09: FIREFLY EFFECT    — drift / flash keyframe swarm
+   SECTION 10: FOOTER            — treeline background, partners, parchment bar
+   SECTION 11: COOKIE BANNER     — fixed bottom overlay
+   ========================================================================== */
+
+/* ==========================================================================
+   SECTION 00: UNIVERSAL / ROOT
+   ========================================================================== */
+
+/* --- Self-hosted brand fonts (fetched from the live site's /assets/fonts/) -- */
+@font-face {
+  font-family: "HarryBeast";               /* site alias: "Secondary" */
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../assets/00-universal/fonts/00-HarryBeastCyr-Regular.woff2) format("woff2");
+}
+@font-face {
+  font-family: "HelveticaNeueW";           /* site alias: "Primary" */
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../assets/00-universal/fonts/00-HelveticaNeue.woff2) format("woff2");
+}
+@font-face {
+  font-family: "HelveticaNeueW";           /* site alias: "Primary Bold" */
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../assets/00-universal/fonts/00-HelveticaNeueBd.woff2) format("woff2");
+}
+
+:root {
+  /* Backgrounds */
+  --hp-bg-dark: #020a17;        /* rgb(2,10,23)    page + footer base, gradient stop */
+  --hp-bg-navy: #101831;        /* rgb(16,24,49)   city-selector bg, gradient stop   */
+  --hp-ink: #031419;            /* rgb(3,20,25)    dark text on light surfaces       */
+  --hp-black: #000000;          /* rgb(0,0,0)      navbar / button text              */
+
+  /* Accents */
+  --hp-ice: #a3e6ef;            /* rgb(163,230,239) headings, tile borders, stats    */
+  --hp-gold: #bd9e63;           /* rgb(189,158,99)  primary button fill              */
+  --hp-gold-glow: #bd9e6333;    /* gold @ 20% — soft glow                            */
+  --hp-parchment: #e5dbc1;      /* rgb(229,219,193) copyright bar                    */
+  --hp-fever-yellow: #ffcc00;   /* rgb(255,204,0)   platform accent (carousel dots)  */
+
+  /* Neutrals */
+  --hp-white: #ffffff;          /* rgb(255,255,255) body text on dark                */
+  --hp-slate: #536b75;          /* rgb(83,107,117)  muted UI text                    */
+  --hp-slate-light: #a7b2ba;    /* rgb(167,178,186) secondary muted                  */
+  --hp-mist: #ccd2d8;           /* rgb(204,210,216) faint borders                    */
+
+  /* Status chips — live computed values (theme overrides the palette defaults) */
+  --hp-status-available: #38c39e; /* rgb(56,195,158) "Available"                     */
+  --hp-status-finished: #b63e68;  /* rgb(182,62,104) "Finished"                      */
+  --hp-chip-shadow: 0 .0625rem .1875rem #00000063;
+
+  /* Effects */
+  --hp-firefly-glow: #c9f8fe;   /* rgb(201,248,254) firefly flash                    */
+  --hp-fade-to-dark: linear-gradient(180deg, #0000 76.48%, #020a17);
+  --hp-fade-to-navy: linear-gradient(180deg, #0000 76.48%, #101831);
+
+  /* Fonts */
+  --hp-font-display: "HarryBeast", Georgia, serif;
+  --hp-font-body: "HelveticaNeueW", "Helvetica Neue", Arial, sans-serif;
+
+  --bs-body-bg: var(--hp-bg-dark);
+}
+
+body {
+  background-color: var(--hp-bg-dark);
+  color: var(--hp-white);
+  font-family: var(--hp-font-body);
+}
+
+/* Type scale — sampled from the live stylesheet (.font-h1 … .font-h4) */
+.font-h1 { font-size: 1.75rem; line-height: 2rem;    font-weight: 600; }
+.font-h2 { font-size: 1.5rem;  line-height: 1.75rem; font-weight: 600; }
+.font-h3 { font-size: 1.25rem; line-height: 1.5rem;  font-weight: 600; }
+.font-h4 { font-size: 1.125rem; line-height: 1.75rem; font-weight: 600; }
+
+.font-display { font-family: var(--hp-font-display); font-weight: 400; }
+
+/* Section headings share the display face + ice tint */
+.hp-section-title {
+  font-family: var(--hp-font-display);
+  color: var(--hp-ice);
+  font-weight: 400;
+}
+
+/* Flourish divider under headings */
+.hp-flourish { max-width: 19.5rem; }
+
+/* Brand primary button — pill, gold fill, black caps label
+   sampled: radius 1.5rem, min-height 3rem, padding-inline 1.5rem,
+   font 600 .875rem/1.25rem, letter-spacing .0625rem, hover grayscale(.5) */
+.btn-hp-primary {
+  --bs-btn-bg: var(--hp-gold);
+  --bs-btn-color: var(--hp-white);
+  --bs-btn-hover-bg: var(--hp-gold);
+  --bs-btn-hover-color: var(--hp-white);
+  --bs-btn-border-radius: 1.5rem;
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-font-weight: 600;
+  --bs-btn-font-size: .875rem;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-border-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: .0625rem;
+  line-height: 1.25rem;
+  min-height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  transition: background ease .3s, color ease .3s, filter ease .3s;
+}
+.btn-hp-primary:hover { filter: grayscale(.5); }
+
+/* Containers cap at 75rem like the original .container */
+.hp-container-cap { max-width: 75rem; }
+
+/* ==========================================================================
+   SECTION 01: NAVBAR STYLING
+   ========================================================================== */
+
+/* Fixed 4.5rem black strip; slides in from -4.5rem on the live site */
+.hp-navbar {
+  background-color: var(--hp-black);
+  height: 4.5rem;
+}
+.hp-navbar .navbar-brand img { width: 77px; height: 50px; }
+
+.hp-lang .dropdown-toggle {
+  color: var(--hp-white);
+  text-transform: lowercase;
+  font-size: .875rem;
+  background: none;
+  border: 0;
+}
+.hp-lang .dropdown-menu {
+  background-color: var(--hp-black);
+  min-width: 4rem;
+}
+.hp-lang .dropdown-item { color: var(--hp-white); text-transform: lowercase; }
+.hp-lang .dropdown-item:hover { background-color: var(--hp-bg-navy); }
+
+/* ==========================================================================
+   SECTION 02: HERO STYLING
+   ========================================================================== */
+
+.hp-hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Layer 1+2: poster behind autoplaying video, both cover-cropped */
+.hp-hero__media,
+.hp-hero__media img,
+.hp-hero__media video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Layer 3: fade the forest into the page background at the bottom
+   sampled: linear-gradient(180deg,#0000 76.48%,#020a17) */
+.hp-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: var(--hp-fade-to-dark);
+  pointer-events: none;
+}
+
+/* Layer 4: content */
+.hp-hero__content { position: relative; z-index: 2; }
+.hp-hero__logo { width: 350px; max-width: 80vw; height: auto; }
+
+.hp-hero__tagline {
+  font-family: var(--hp-font-display);
+  font-weight: 100;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-shadow: 0 .125rem .5rem #00000080;
+}
+@media (min-width: 900px) {
+  .hp-hero__tagline { font-size: 3rem; line-height: 1.2; }
+}
+
+.hp-hero__icon { width: 60px; height: 60px; object-fit: contain; }
+.hp-hero__icon-label { font-size: .875rem; }
+
+/* ==========================================================================
+   SECTION 03: INTRO STYLING
+   ========================================================================== */
+
+/* Fixed-attachment starfield = cheap parallax (original uses the same trick) */
+.hp-intro {
+  min-height: 50rem;
+  background-image: url(../assets/00-universal/images/00-bg-stars-1512x1023.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  z-index: 0;
+}
+@media (max-width: 900px) {
+  .hp-intro { min-height: 37.5rem; background-attachment: scroll; }
+}
+
+.hp-intro__title {
+  font-family: var(--hp-font-display);
+  font-weight: 400;
+  color: var(--hp-ice);
+  font-size: 2.25rem;
+  line-height: 1.2;
+}
+@media (min-width: 900px) {
+  .hp-intro__title { font-size: 3.25rem; line-height: 3.5rem; }
+}
+
+/* Moon floats behind the copy, masked out toward top & bottom
+   sampled mask: linear-gradient(0deg,transparent 10%,black 20%,black 80%,transparent) */
+.hp-moon-container {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  -webkit-mask-image: linear-gradient(0deg, transparent 10%, black 20%, black 80%, transparent);
+  mask-image: linear-gradient(0deg, transparent 10%, black 20%, black 80%, transparent);
+}
+.hp-moon {
+  width: 18.75rem;
+  height: 18.75rem;
+  background: url(../assets/03-intro/images/03-parallax-moon-466x466.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+  filter: opacity(.8);
+}
+
+/* ==========================================================================
+   SECTION 04: MILESTONES
+   ========================================================================== */
+
+/* sampled inline bg: linear-gradient(0deg, rgba(16,24,49,1) 0%, rgba(2,10,23,1) 100%) */
+.hp-milestones {
+  background: linear-gradient(0deg, rgba(16, 24, 49, 1) 0%, rgba(2, 10, 23, 1) 100%);
+}
+/* Live stat cards: 1px ice ring, 2rem radius, 1rem padding, 90px icons */
+.hp-milestones__card {
+  border: 1px solid var(--hp-ice);
+  border-radius: 2rem;
+  padding: 1rem;
+  height: 100%;
+}
+.hp-milestones__image { width: 90px; height: 90px; object-fit: contain; }
+.hp-milestones__number {
+  font-family: var(--hp-font-display);
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: var(--hp-ice);
+}
+.hp-milestones__number strong { font-size: .9375rem; font-weight: 700; }
+
+/* ==========================================================================
+   SECTION 05: CITY SELECTOR
+   ========================================================================== */
+
+.hp-city-panel { background: var(--hp-bg-navy); }
+
+.hp-city__link { text-decoration: none; color: var(--hp-white); }
+.hp-city__name {
+  font-family: var(--hp-font-display);
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+/* Tile: 2rem radius ring in ice blue (sampled: border 1px var ice, radius 2rem) */
+.hp-city__asset { position: relative; display: block; }
+.hp-city__asset img {
+  border-radius: 2rem;
+  border: solid .0625rem var(--hp-ice);
+}
+
+/* Status chip pinned to the tile's left edge
+   sampled: font 400 .875rem/1.25rem, padding .25rem .5rem, margin 2rem 0,
+   radius 0 .25rem .25rem 0, shadow 0 1px 3px #00000063 */
+.hp-city__status {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 2rem 0;
+  padding: .25rem .5rem;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  border-radius: 0 .25rem .25rem 0;
+  box-shadow: var(--hp-chip-shadow);
+  color: var(--hp-white);
+}
+.hp-city__status--available { background: var(--hp-status-available); }
+.hp-city__status--finished  { background: var(--hp-status-finished); }
+
+/* ==========================================================================
+   SECTION 06: FINISHED EXPERIENCES — inherits Section 05 tile DNA
+   ========================================================================== */
+
+/* ==========================================================================
+   SECTION 07: PRESS
+   ========================================================================== */
+
+/* sampled inline bg: linear-gradient(0deg, rgba(2,10,23,1) 0%, rgba(16,24,49,1) 100%) */
+.hp-press {
+  background: linear-gradient(0deg, rgba(2, 10, 23, 1) 0%, rgba(16, 24, 49, 1) 100%);
+}
+.hp-press__logo { max-height: 5rem; width: auto; object-fit: contain; }
+
+/* Live slides are ice-blue cards: bg #a3e6ef, radius 32px, padding 32px 40px,
+   quote text in the page's dark navy */
+.hp-press__card {
+  background-color: var(--hp-ice);
+  color: var(--hp-bg-dark);
+  border-radius: 2rem;
+  padding: 2rem 2.5rem;
+  height: 100%;
+}
+.hp-press__quote { font-size: 1.25rem; line-height: 1.5rem; }
+
+.hp-press .carousel-indicators [data-bs-target] {
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background-color: var(--hp-white);
+}
+.hp-press .carousel-indicators .active { background-color: var(--hp-fever-yellow); }
+
+/* ==========================================================================
+   SECTION 08: SORTING HAT — uses shared heading + button styles only
+   ========================================================================== */
+
+/* ==========================================================================
+   SECTION 09: FIREFLY EFFECT
+   ========================================================================== */
+
+/* Reduced build of the site's 9-firefly swarm: each dot orbits (drift),
+   glows (flash) and wanders (move variants). Original keyframes: drift,
+   flash, move1..move15 */
+.hp-firefly-field { position: relative; min-height: 8rem; }
+
+.firefly {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: .4vw;
+  height: .4vw;
+  margin: -.2vw 0 0 9.8vw;
+  pointer-events: none;
+}
+.firefly::before,
+.firefly::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform-origin: -10vw;
+}
+.firefly::before {
+  background: var(--hp-black);
+  opacity: .4;
+  animation: drift 14s ease alternate infinite;
+}
+.firefly::after {
+  background: var(--hp-white);
+  opacity: 0;
+  box-shadow: 0 0 0 0 var(--hp-firefly-glow);
+  animation: drift 14s ease alternate infinite, flash 6s ease infinite;
+}
+
+.firefly:nth-child(3n)   { animation: hp-move1 38s ease alternate infinite; }
+.firefly:nth-child(3n+1) { animation: hp-move2 44s ease alternate infinite; }
+.firefly:nth-child(3n+2) { animation: hp-move3 50s ease alternate infinite; }
+.firefly:nth-child(2n)::after { animation-delay: 2.4s; animation-duration: 8s, 5s; }
+.firefly:nth-child(5n)::after { animation-delay: 1.1s; animation-duration: 11s, 7s; }
+
+@keyframes drift { 0% { transform: rotate(0deg); } 100% { transform: rotate(180deg); } }
+@keyframes flash {
+  0%, 30%, 100% { opacity: 0; box-shadow: 0 0 0 0 var(--hp-firefly-glow); }
+  5% { opacity: 1; box-shadow: 0 0 2vw .4vw var(--hp-firefly-glow); }
+}
+@keyframes hp-move1 {
+  0%   { transform: translate(-28vw, -8vh) scale(.6); }
+  50%  { transform: translate(14vw, 6vh) scale(1); }
+  100% { transform: translate(30vw, -4vh) scale(.75); }
+}
+@keyframes hp-move2 {
+  0%   { transform: translate(24vw, 4vh) scale(.8); }
+  50%  { transform: translate(-18vw, -6vh) scale(.55); }
+  100% { transform: translate(-32vw, 8vh) scale(1); }
+}
+@keyframes hp-move3 {
+  0%   { transform: translate(-6vw, 10vh) scale(.9); }
+  50%  { transform: translate(22vw, -8vh) scale(.65); }
+  100% { transform: translate(-24vw, -2vh) scale(.8); }
+}
+
+/* ==========================================================================
+   SECTION 10: FOOTER
+   ========================================================================== */
+
+/* sampled inline style: url(17-Footer…webp) top / cover / no-repeat over #020a17 */
+.hp-footer {
+  background-color: var(--hp-bg-dark);
+  background-image: url(../assets/00-universal/images/00-bg-footer-treeline-1800x1030.webp);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--hp-white);
+}
+.hp-footer__logo { width: 232px; height: auto; }
+.hp-footer__partners-title { text-transform: capitalize; font-size: 1rem; }
+
+.hp-footer .hp-social-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var(--hp-white);
+  transition: fill ease .3s;
+}
+.hp-footer .hp-social-icon:hover { fill: var(--hp-ice); }
+
+.hp-footer__nav-link {
+  color: var(--hp-parchment);
+  text-decoration: none;
+  transition: color ease .3s;
+}
+.hp-footer__nav-link:hover { color: var(--hp-white); }
+
+/* Parchment legal strip — sampled inline bg #e5dbc1, small text .6875rem */
+.hp-copyright {
+  background-color: var(--hp-parchment);
+  color: var(--hp-black);
+}
+.hp-copyright small { display: block; padding: .5rem 0; font-size: .6875rem; }
+.hp-copyright a { color: var(--hp-black); text-decoration: underline; }
+
+/* ==========================================================================
+   SECTION 11: COOKIE BANNER
+   ========================================================================== */
+
+.hp-cookiebar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background-color: #1d232b;
+  color: var(--hp-white);
+  font-size: .8125rem;
+}
+.hp-cookiebar a { color: var(--hp-fever-yellow); }
+.btn-hp-cookie {
+  --bs-btn-color: var(--hp-parchment);
+  --bs-btn-border-color: var(--hp-parchment);
+  --bs-btn-hover-color: var(--hp-ink);
+  --bs-btn-hover-bg: var(--hp-parchment);
+  --bs-btn-font-size: .8125rem;
+}
