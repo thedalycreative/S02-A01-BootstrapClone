@@ -50,25 +50,22 @@ You can run the site using any of the following methods:
 
 - **Direct in Browser:** Double-click `index.html` or drag and drop `index.html` into any modern web browser (Chrome, Safari, Firefox, Edge).
 - **VS Code Live Server:** Open the project folder in VS Code, right-click `index.html`, and select **Open with Live Server**.
-- **Local HTTP Server (Optional):**
-  ```bash
-  # Python 3 built-in server
-  python3 -m http.server 8000
-
-  # Or using Node npx serve
-  npx serve .
-  ```
-  Then open `http://localhost:8000` in your browser.
-
 
 ```
 S02-A01-BootstrapClone/
 ├── index.html              ← the finished Bootstrap 5 clone
 ├── css/styles.css          ← brand-layer stylesheet (variables, fonts, glows, keyframes)
-├── verification-report.md  ← live-site comparison (source of truth for every number below)
-├── assets/                 ← numbered asset tree + styleguide (this is where the boards live)
-├── clone-fullpage.jpeg / live-fullpage.jpeg  ← side-by-side verification screenshots
-└── _raw/                   ← your untouched original browser save (delete when happy)
+├── assets/00-universal/    ← favicons, logo, flourish, bg textures, fonts
+├── assets/01-navbar/       ← language dropdown flag icons
+├── assets/02-hero/         ← posters, videos, mobile-video-source-url.txt
+├── assets/03-intro/        ← moon
+├── assets/04-milestones/   ← stat icons
+├── assets/05-city-selector/← Perth tile image
+├── assets/06-finished-experiences/ ← 15 city tile images
+├── assets/07-press/        ← 6 outlet logos
+├── assets/08-sorting-hat/  ← sorting hat image
+├── assets/10-footer/       ← WB + Fever partner logos, treeline
+└── assets/styleguide/      ← badges, boards, diagrams
 ```
 
 ---
