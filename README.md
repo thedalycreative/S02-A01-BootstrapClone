@@ -17,13 +17,13 @@ site made of glowing mushrooms, drifting fireflies and parchment-gold buttons. H
 
 ## 📸 Visual Showcase & Screenshots
 
-| Bootstrap 5 Clone Preview | Hero Video Desktop Poster |
+| Bootstrap 5 Clone Preview | Live Site Reference (Original) |
 | :---: | :---: |
-| ![Bootstrap 5 Clone Screenshot](assets/styleguide/screenshots/clone-fullpage.jpeg) | ![Hero Video Desktop Poster](assets/02-hero/videos/02-hero-video-poster-desktop-1080x608.webp) |
+| ![Bootstrap 5 Clone Screenshot](assets/styleguide/screenshots/clone-fullpage.jpeg) | ![Live Site Reference](assets/styleguide/screenshots/live-fullpage.jpeg) |
 
-| Live Site Reference | Parallax Glowing Moon |
+| Hero Video Desktop Poster | Parallax Glowing Moon |
 | :---: | :---: |
-| ![Live Site Reference](assets/styleguide/screenshots/live-fullpage.jpeg) | ![Parallax Moon Asset](assets/03-intro/images/03-parallax-moon-466x466.webp) |
+| ![Hero Video Desktop Poster](assets/02-hero/videos/02-hero-video-poster-desktop-1080x608.webp) | ![Parallax Moon Asset](assets/03-intro/images/03-parallax-moon-466x466.webp) |
 
 ---
 
