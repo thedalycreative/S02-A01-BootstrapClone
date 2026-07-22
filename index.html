@@ -1,12 +1,17 @@
 <!doctype html>
 <html lang="en">
 <!-------------------⬇ --- SECTION 00: HEAD TAG DATA -- ⬇------------------->
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--TITLE--> <title>Harry Potter: A Forbidden Forest Experience</title>
-  <!--DESCRIPTION--> <meta name="description" content="Bootstrap 5 practice rebuild of hpforbiddenforestexperience.com — a nighttime woodland trail filled with magical creatures and wizarding wonders.">
-  <!--KEYWORDS--> <meta name="keywords" content="harry potter, forbidden forest, experience, outdoor trail, bootstrap clone">
+  <!--TITLE-->
+  <title>Harry Potter: A Forbidden Forest Experience</title>
+  <!--DESCRIPTION-->
+  <meta name="description"
+    content="Bootstrap 5 practice rebuild of hpforbiddenforestexperience.com — a nighttime woodland trail filled with magical creatures and wizarding wonders.">
+  <!--KEYWORDS-->
+  <meta name="keywords" content="harry potter, forbidden forest, experience, outdoor trail, bootstrap clone">
   <!--ICON-->
   <link rel="icon" type="image/x-icon" href="assets/00-universal/images/00-favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/00-universal/images/00-favicon-32-32x32.png">
@@ -18,13 +23,14 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/00-universal/images/00-og-image-2890x1722.jpg">
   <!--STYLESHEETS-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <!-------------------⬆ --- SECTION 00: HEAD TAG DATA -- ⬆------------------->
 
 <body>
-<!--
+  <!--
   ============================== DEV TABLE OF CONTENTS ==============================
   SECTION 00  HEAD TAG DATA          (meta, favicons, stylesheets)
   SECTION 01  NAVBAR                 #navbar    — fixed black bar, logo, language menu
@@ -41,429 +47,587 @@
   ===================================================================================
 -->
 
-<!-------------------⬇ --- SECTION 01: NAVBAR -- ⬇------------------->
-<header id="navbar">
-  <nav class="navbar fixed-top hp-navbar" aria-label="Main">
-    <div class="container-fluid hp-container-cap px-3">
-      <a class="navbar-brand py-0" href="#" aria-label="Go to homepage">
-        <img src="assets/00-universal/images/00-event-logo-stacked-944x610.svg" alt="Harry Potter: Forbidden Forest Experience" width="77" height="50">
-      </a>
-      <div class="dropdown hp-lang">
-        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">en</button>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="https://hpforbiddenforestexperience.com/fr/" aria-label="Change language to French">fr</a></li>
-          <li><a class="dropdown-item" href="https://hpforbiddenforestexperience.com/nl/" aria-label="Change language to Dutch">nl</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-<!-------------------⬆ --- SECTION 01: NAVBAR -- ⬆------------------->
-
-<!-------------------⬇ --- SECTION 02: HERO -- ⬇------------------->
-<section id="hero" class="hp-hero">
-  <div class="hp-hero__media">
-    <picture>
-      <source media="(max-width: 900px)" srcset="assets/02-hero/videos/02-hero-video-poster-mobile-360x640.webp">
-      <img src="assets/02-hero/videos/02-hero-video-poster-desktop-1080x608.webp" alt="Nighttime forest lit by floating lanterns" class="object-fit-cover">
-    </picture>
-    <video class="object-fit-cover" autoplay loop muted playsinline
-           poster="assets/02-hero/videos/02-hero-video-poster-desktop-1080x608.webp">
-      <source src="https://hpforbiddenforestexperience.com/assets/videos/CR-HPAFFE-ACQ-WL-LPHero-P1-16x9-BNE-ENG_zpmk98.webm" type="video/webm">
-      <source src="https://hpforbiddenforestexperience.com/assets/videos/CR-HPAFFE-ACQ-WL-LPHero-P1-16x9-BNE-ENG_zpmk98.mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="hp-hero__content container hp-container-cap text-center py-5 mt-5">
-    <img src="assets/00-universal/images/00-event-logo-stacked-944x610.svg" alt="Harry Potter: A Forbidden Forest Experience logo" class="hp-hero__logo mb-3" width="350" height="226" fetchpriority="high">
-    <p class="hp-hero__tagline mb-4">Prepare for the most magical of walks!</p>
-    <a href="#city-selector" class="btn btn-hp-primary mb-5">Available cities</a>
-    <div class="d-flex justify-content-center gap-4 gap-md-5 flex-wrap">
-      <span class="d-flex align-items-center gap-2">
-        <img src="assets/02-hero/images/02-icon-interactive-45x43.svg" alt="Interactive" class="hp-hero__icon" width="60" height="57">
-        <span class="hp-hero__icon-label">Interactive</span>
-      </span>
-      <span class="d-flex align-items-center gap-2">
-        <img src="assets/02-hero/images/02-icon-family-friendly-40x43.svg" alt="Family friendly" class="hp-hero__icon" width="60" height="65">
-        <span class="hp-hero__icon-label">Family friendly</span>
-      </span>
-      <span class="d-flex align-items-center gap-2">
-        <img src="assets/02-hero/images/02-icon-outdoor-trail-43x43.svg" alt="Outdoors" class="hp-hero__icon" width="60" height="60">
-        <span class="hp-hero__icon-label">Outdoor Trail</span>
-      </span>
-    </div>
-  </div>
-</section>
-<!-------------------⬆ --- SECTION 02: HERO -- ⬆------------------->
-
-<!-------------------⬇ --- SECTION 03: INTRO -- ⬇------------------->
-<section id="intro" class="hp-intro">
-  <div class="container hp-container-cap text-center position-relative py-5">
-    <h1 class="hp-intro__title mb-3">Harry Potter: A Forbidden Forest Experience</h1>
-    <p class="mb-4"><img src="assets/00-universal/images/00-divider-flourish-312x34.svg" alt="" class="hp-flourish img-fluid" title="text decoration"></p>
-    <p class="mx-auto col-md-8">A nighttime woodland trail filled with magical creatures and wizarding wonders from the Harry Potter™ and Fantastic Beasts™ films.</p>
-    <p class="mx-auto col-md-8">Set in beautiful woodland, this experience has been brought to life by award-winning theatrical designers and experiential creators.</p>
-    <p class="mx-auto col-md-8">Find your nearest city and enjoy Harry Potter: A Forbidden Forest Experience now!</p>
-    <div class="hp-moon-container" aria-hidden="true">
-      <div class="hp-moon"></div>
-    </div>
-  </div>
-</section>
-<!-------------------⬆ --- SECTION 03: INTRO -- ⬆------------------->
-
-<!-------------------⬇ --- SECTION 04: MILESTONES -- ⬇------------------->
-<section id="milestones" class="hp-milestones">
-  <div class="container hp-container-cap py-5">
-    <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
-      <div class="col">
-        <div class="hp-milestones__card d-flex flex-column align-items-center">
-        <img src="assets/04-milestones/images/04-stat-visitors-900x900.webp" alt="International visitors" class="hp-milestones__image img-fluid" width="900" height="900" loading="lazy">
-        <span class="hp-milestones__number mt-2">2M</span>
-        <p class="mb-0">international visitors</p>
-        </div>
-      </div>
-      <div class="col">
-        <div class="hp-milestones__card d-flex flex-column align-items-center">
-        <img src="assets/04-milestones/images/04-stat-trees-900x900.webp" alt="Trees planted" class="hp-milestones__image img-fluid" width="900" height="900" loading="lazy">
-        <span class="hp-milestones__number mt-2">+99k</span>
-        <p class="mb-0">trees planted</p>
-        </div>
-      </div>
-      <div class="col">
-        <div class="hp-milestones__card d-flex flex-column align-items-center">
-        <img src="assets/04-milestones/images/04-stat-cities-900x900.webp" alt="Cities" class="hp-milestones__image img-fluid" width="900" height="900" loading="lazy">
-        <span class="hp-milestones__number mt-2">4 <strong>continents</strong>, 16 <strong>cities</strong></span>
-        <p class="mb-0">and counting</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-------------------⬆ --- SECTION 04: MILESTONES -- ⬆------------------->
-
-<!-------------------⬇ --- SECTION 05: CITY SELECTOR -- ⬇------------------->
-<section id="city-selector" class="hp-city-panel">
-  <div class="container hp-container-cap py-5">
-    <h2 class="hp-section-title font-h2 text-center mb-4">Available cities</h2>
-    <div class="row row-cols-2 row-cols-md-3 row-cols-xl-5 g-4 justify-content-center">
-      <div class="col">
-        <a class="hp-city__link d-flex flex-column gap-3 text-center" href="https://hpforbiddenforestexperience.com/perth/" aria-label="Change city to Perth">
-          <h3 class="hp-city__name font-h3 mb-0">Perth</h3>
-          <span class="hp-city__asset">
-            <span class="hp-city__status hp-city__status--available">Available</span>
-            <img src="assets/05-city-selector/images/05-city-perth-250x250.png" alt="Perth" class="img-fluid" width="250" height="250" loading="lazy">
-          </span>
+  <!-------------------⬇ --- SECTION 01: NAVBAR -- ⬇------------------->
+  <header id="navbar">
+    <nav class="navbar fixed-top hp-navbar" aria-label="Main">
+      <div class="container-fluid hp-container-cap px-3">
+        <!--NAVBAR BRAND LOGO-->
+        <a class="navbar-brand py-0" href="#" aria-label="Go to homepage">
+          <img src="assets/00-universal/images/00-event-logo-stacked-944x610.svg"
+            alt="Harry Potter: Forbidden Forest Experience" width="77" height="50">
         </a>
-      </div>
-    </div>
-  </div>
-</section>
-<!-------------------⬆ --- SECTION 05: CITY SELECTOR -- ⬆------------------->
-
-<!-------------------⬇ --- SECTION 06: FINISHED EXPERIENCES -- ⬇------------------->
-<section id="finished-experiences" class="hp-city-panel">
-  <div class="container hp-container-cap py-5">
-    <h2 class="hp-section-title font-h2 text-center mb-4">Past Experiences</h2>
-    <div class="row row-cols-2 row-cols-md-3 row-cols-xl-5 g-4 justify-content-center">
-      <div class="col">
-        <span class="hp-city__link d-flex flex-column gap-3 text-center">
-          <h3 class="hp-city__name font-h3 mb-0">Austin</h3>
-          <span class="hp-city__asset">
-            <span class="hp-city__status hp-city__status--finished">Finished</span>
-            <img src="assets/06-finished-experiences/images/06-city-austin-250x250.png" alt="Austin" class="img-fluid" width="250" height="250" loading="lazy">
-          </span>
-        </span>
-      </div>
-      <div class="col">
-        <span class="hp-city__link d-flex flex-column gap-3 text-center">
-          <h3 class="hp-city__name font-h3 mb-0">Montauban</h3>
-          <span class="hp-city__asset">
-            <span class="hp-city__status hp-city__status--finished">Finished</span>
-            <img src="assets/06-finished-experiences/images/06-city-montauban-250x250.png" alt="Montauban" class="img-fluid" width="250" height="250" loading="lazy">
-          </span>
-        </span>
-      </div>
-      <div class="col">
-        <span class="hp-city__link d-flex flex-column gap-3 text-center">
-          <h3 class="hp-city__name font-h3 mb-0">Leesburg</h3>
-          <span class="hp-city__asset">
-            <span class="hp-city__status hp-city__status--finished">Finished</span>
-            <img src="assets/06-finished-experiences/images/06-city-leesburg-250x250.png" alt="Leesburg" class="img-fluid" width="250" height="250" loading="lazy">
-          </span>
-        </span>
-      </div>
-      <div class="col">
-        <span class="hp-city__link d-flex flex-column gap-3 text-center">
-          <h3 class="hp-city__name font-h3 mb-0">Little Elm, TX</h3>
-          <span class="hp-city__asset">
-            <span class="hp-city__status hp-city__status--finished">Finished</span>
-            <img src="assets/06-finished-experiences/images/06-city-little-elm-250x250.png" alt="Little Elm, TX" class="img-fluid" width="250" height="250" loading="lazy">
-          </span>
-        </span>
-      </div>
-      <div class="col">
-        <span class="hp-city__link d-flex flex-column gap-3 text-center">
-          <h3 class="hp-city__name font-h3 mb-0">Groenenberg</h3>
-          <span class="hp-city__asset">
-            <span class="hp-city__status hp-city__status--finished">Finished</span>
-            <img src="assets/06-finished-experiences/images/06-city-groenenberg-250x250.png" alt="Groenenberg" class="img-fluid" width="250" height="250" loading="lazy">
-          </span>
-        </span>
-      </div>
-      <div class="col">
-        <span class="hp-city__link d-flex flex-column gap-3 text-center">
-          <h3 class="hp-city__name font-h3 mb-0">Cheshire</h3>
-          <span class="hp-city__asset">
-            <span class="hp-city__status hp-city__status--finished">Finished</span>
-            <img src="assets/06-finished-experiences/images/06-city-cheshire-250x250.png" alt="Cheshire" class="img-fluid" width="250" height="250" loading="lazy">
-          </span>
-        </span>
-      </div>
-      <div class="col">
-        <span class="hp-city__link d-flex flex-column gap-3 text-center">
-          <h3 class="hp-city__name font-h3 mb-0">Westchester, NY</h3>
-          <span class="hp-city__asset">
-            <span class="hp-city__status hp-city__status--finished">Finished</span>
-            <img src="assets/06-finished-experiences/images/06-city-westchester-250x250.png" alt="Westchester, NY" class="img-fluid" width="250" height="250" loading="lazy">
-          </span>
-        </span>
-      </div>
-      <div class="col">
-        <span class="hp-city__link d-flex flex-column gap-3 text-center">
-          <h3 class="hp-city__name font-h3 mb-0">Singapore</h3>
-          <span class="hp-city__asset">
-            <span class="hp-city__status hp-city__status--finished">Finished</span>
-            <img src="assets/06-finished-experiences/images/06-city-singapore-250x250.png" alt="Singapore" class="img-fluid" width="250" height="250" loading="lazy">
-          </span>
-        </span>
-      </div>
-      <div class="col">
-        <span class="hp-city__link d-flex flex-column gap-3 text-center">
-          <h3 class="hp-city__name font-h3 mb-0">Melbourne</h3>
-          <span class="hp-city__asset">
-            <span class="hp-city__status hp-city__status--finished">Finished</span>
-            <img src="assets/06-finished-experiences/images/06-city-melbourne-250x250.png" alt="Melbourne" class="img-fluid" width="250" height="250" loading="lazy">
-          </span>
-        </span>
-      </div>
-      <div class="col">
-        <span class="hp-city__link d-flex flex-column gap-3 text-center">
-          <h3 class="hp-city__name font-h3 mb-0">Brisbane</h3>
-          <span class="hp-city__asset">
-            <span class="hp-city__status hp-city__status--finished">Finished</span>
-            <img src="assets/06-finished-experiences/images/06-city-brisbane-250x250.png" alt="Brisbane" class="img-fluid" width="250" height="250" loading="lazy">
-          </span>
-        </span>
-      </div>
-      <div class="col">
-        <span class="hp-city__link d-flex flex-column gap-3 text-center">
-          <h3 class="hp-city__name font-h3 mb-0">Chicago</h3>
-          <span class="hp-city__asset">
-            <span class="hp-city__status hp-city__status--finished">Finished</span>
-            <img src="assets/06-finished-experiences/images/06-city-chicago-250x250.png" alt="Chicago" class="img-fluid" width="250" height="250" loading="lazy">
-          </span>
-        </span>
-      </div>
-      <div class="col">
-        <span class="hp-city__link d-flex flex-column gap-3 text-center">
-          <h3 class="hp-city__name font-h3 mb-0">Cincinnati</h3>
-          <span class="hp-city__asset">
-            <span class="hp-city__status hp-city__status--finished">Finished</span>
-            <img src="assets/06-finished-experiences/images/06-city-cincinnati-250x250.png" alt="Cincinnati" class="img-fluid" width="250" height="250" loading="lazy">
-          </span>
-        </span>
-      </div>
-      <div class="col">
-        <span class="hp-city__link d-flex flex-column gap-3 text-center">
-          <h3 class="hp-city__name font-h3 mb-0">Vancouver</h3>
-          <span class="hp-city__asset">
-            <span class="hp-city__status hp-city__status--finished">Finished</span>
-            <img src="assets/06-finished-experiences/images/06-city-austin-250x250.png" alt="Vancouver" class="img-fluid" width="250" height="250" loading="lazy">
-          </span>
-        </span>
-      </div>
-      <div class="col">
-        <span class="hp-city__link d-flex flex-column gap-3 text-center">
-          <h3 class="hp-city__name font-h3 mb-0">深圳</h3>
-          <span class="hp-city__asset">
-            <span class="hp-city__status hp-city__status--finished">Finished</span>
-            <img src="assets/06-finished-experiences/images/06-city-singapore-250x250.png" alt="Shenzhen" class="img-fluid" width="250" height="250" loading="lazy">
-          </span>
-        </span>
-      </div>
-      <div class="col">
-        <span class="hp-city__link d-flex flex-column gap-3 text-center">
-          <h3 class="hp-city__name font-h3 mb-0">Santiago</h3>
-          <span class="hp-city__asset">
-            <span class="hp-city__status hp-city__status--finished">Finished</span>
-            <img src="assets/06-finished-experiences/images/06-city-groenenberg-250x250.png" alt="Santiago" class="img-fluid" width="250" height="250" loading="lazy">
-          </span>
-        </span>
-      </div>
-    </div>
-  </div>
-</section>
-<!-------------------⬆ --- SECTION 06: FINISHED EXPERIENCES -- ⬆------------------->
-
-<!-------------------⬇ --- SECTION 07: PRESS -- ⬇------------------->
-<section id="press" class="hp-press">
-  <div class="container hp-container-cap py-5">
-    <h2 class="hp-section-title font-h2 text-center mb-2">What the Press is Saying</h2>
-    <p class="text-center mb-5"><img src="assets/00-universal/images/00-divider-flourish-312x34.svg" alt="" class="hp-flourish img-fluid" title="text decoration"></p>
-
-    <!-- 6 press cards, paraphrased summaries of each outlet's coverage
-         (original verbatim quotes are the outlets' copyright — see README) -->
-    <div id="pressCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="row row-cols-1 row-cols-md-3 g-4 px-5">
-            <div class="col text-center">
-              <figure class="hp-press__card mb-0">
-                <img src="assets/07-press/images/07-press-urban-list-273x100.png" alt="Urban List" class="hp-press__logo mb-3" width="273" height="100" loading="lazy">
-                <figcaption class="hp-press__quote">Reports that after selling out across the USA and UK, the official experience set out to enchant the Mornington Peninsula in April 2024.</figcaption>
-              </figure>
-            </div>
-            <div class="col text-center">
-              <figure class="hp-press__card mb-0">
-                <img src="assets/07-press/images/07-press-time-out-263x100.png" alt="Time Out" class="hp-press__logo mb-3" width="263" height="100" loading="lazy">
-                <figcaption class="hp-press__quote">Tells Melbourne readers to grab wands and house ties for a brand-new experience it calls a dream outing for any Potterhead.</figcaption>
-              </figure>
-            </div>
-            <div class="col text-center">
-              <figure class="hp-press__card mb-0">
-                <img src="assets/07-press/images/07-press-concrete-playground-453x100.png" alt="Concrete Playground" class="hp-press__logo mb-3" width="453" height="100" loading="lazy">
-                <figcaption class="hp-press__quote">Describes an after-dark forest where visitors don't just watch the wizarding world — they join in, as every aspiring Hogwarts student has wanted to.</figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row row-cols-1 row-cols-md-3 g-4 px-5">
-            <div class="col text-center">
-              <figure class="hp-press__card mb-0">
-                <img src="assets/07-press/images/07-press-sunrise-188x100.png" alt="Sunrise" class="hp-press__logo mb-3" width="188" height="100" loading="lazy">
-                <figcaption class="hp-press__quote">Covers the Melbourne arrival, with around 3,000 tickets selling a day and organisers planning to take the wizarding world around the country.</figcaption>
-              </figure>
-            </div>
-            <div class="col text-center">
-              <figure class="hp-press__card mb-0">
-                <img src="assets/07-press/images/07-press-channel9-295x50.png" alt="Channel 9 News" class="hp-press__logo mb-3" width="295" height="50" loading="lazy">
-                <figcaption class="hp-press__quote">Highlights the Mornington Peninsula trail's familiar characters and creatures, nearly 30 years after Harry Potter fever first swept the globe.</figcaption>
-              </figure>
-            </div>
-            <div class="col text-center">
-              <figure class="hp-press__card mb-0">
-                <img src="assets/07-press/images/07-press-10-news-first-100x100.png" alt="10 News First" class="hp-press__logo mb-3" width="100" height="100" loading="lazy">
-                <figcaption class="hp-press__quote">Reports on the world-travelling immersive experience opening in Melbourne, bringing fans up close to beloved faces from the books.</figcaption>
-              </figure>
-            </div>
-          </div>
+        <!--LANGUAGE SELECTOR-->
+        <div class="dropdown hp-lang">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">en</button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="https://hpforbiddenforestexperience.com/fr/"
+                aria-label="Change language to French">fr</a></li>
+            <li><a class="dropdown-item" href="https://hpforbiddenforestexperience.com/nl/"
+                aria-label="Change language to Dutch">nl</a></li>
+          </ul>
         </div>
       </div>
-      <div class="carousel-indicators position-static mt-4">
-        <button type="button" data-bs-target="#pressCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Press slide 1"></button>
-        <button type="button" data-bs-target="#pressCarousel" data-bs-slide-to="1" aria-label="Press slide 2"></button>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#pressCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#pressCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-</section>
-<!-------------------⬆ --- SECTION 07: PRESS -- ⬆------------------->
-
-<!-------------------⬇ --- SECTION 08: SORTING HAT -- ⬇------------------->
-<section id="sorting-hat">
-  <div class="container hp-container-cap py-5 text-center">
-    <h2 class="hp-section-title font-h2 mb-2">Sorting Hat™ Quiz</h2>
-    <p class="mb-4"><img src="assets/00-universal/images/00-divider-flourish-312x34.svg" alt="" class="hp-flourish img-fluid" title="text decoration"></p>
-    <h3 class="font-h3 mb-4">Do you know which Hogwarts™ house you belong to?</h3>
-    <a href="https://www.harrypotter.com/sorting-hat" target="_blank" rel="noopener" class="btn btn-hp-primary">Discover</a>
-  </div>
-</section>
-<!-------------------⬆ --- SECTION 08: SORTING HAT -- ⬆------------------->
-
-<!-------------------⬇ --- SECTION 09: FIREFLY EFFECT -- ⬇------------------->
-<section id="firefly-effect" class="hp-firefly-field" aria-hidden="true">
-  <div class="firefly"></div>
-  <div class="firefly"></div>
-  <div class="firefly"></div>
-  <div class="firefly"></div>
-  <div class="firefly"></div>
-  <div class="firefly"></div>
-  <div class="firefly"></div>
-  <div class="firefly"></div>
-  <div class="firefly"></div>
-</section>
-<!-------------------⬆ --- SECTION 09: FIREFLY EFFECT -- ⬆------------------->
-
-<!-------------------⬇ --- SECTION 10: FOOTER -- ⬇------------------->
-<footer id="footer" class="hp-footer text-center pt-5">
-  <div class="container hp-container-cap d-flex flex-column align-items-center gap-4 pt-5">
-    <img src="assets/00-universal/images/00-event-logo-stacked-944x610.svg" alt="Harry Potter: Forbidden Forest Experience" class="hp-footer__logo" width="232" height="150" loading="lazy">
-
-    <div>
-      <p class="hp-footer__partners-title mb-3">Presented by</p>
-      <div class="d-flex align-items-center justify-content-center gap-4">
-        <img src="assets/10-footer/images/10-partner-wb-150x155.png" alt="WB Logo" width="150" height="155" loading="lazy">
-        <img src="assets/10-footer/images/10-partner-fever-552x170.svg" alt="Fever Logo" width="150" height="46" loading="lazy">
-      </div>
-    </div>
-
-    <ul class="list-unstyled d-flex gap-4 mb-0">
-      <li>
-        <a href="https://www.facebook.com/HPforbiddenforestexperience/" target="_blank" rel="noopener nofollow" aria-label="Facebook">
-          <svg class="hp-social-icon" viewBox="0 0 320 512" role="img" aria-hidden="true"><path d="M80 299.3V512h116V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/hpforbiddenforestexperience/" target="_blank" rel="noopener nofollow" aria-label="Instagram">
-          <svg class="hp-social-icon" viewBox="0 0 448 512" role="img" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-        </a>
-      </li>
-    </ul>
-
-    <nav aria-label="Footer">
-      <ul class="list-unstyled d-flex flex-wrap justify-content-center gap-4 mb-0">
-        <li><a class="hp-footer__nav-link" href="https://support.feverup.com/hc/en-us/requests/new" target="_blank" rel="noopener">Contact</a></li>
-        <li><a class="hp-footer__nav-link" href="https://business.feverup.com/ambassadors-influencers/" target="_blank" rel="noopener">Influencers</a></li>
-        <li><a class="hp-footer__nav-link" href="mailto:press@hpforbiddenforestexperience.com">Press</a></li>
-        <li><a class="hp-footer__nav-link" href="https://business.feverup.com/affiliates/" target="_blank" rel="noopener">Affiliates</a></li>
-        <li><a class="hp-footer__nav-link" href="https://business.feverup.com/licensing/" target="_blank" rel="noopener">Licensing</a></li>
-      </ul>
     </nav>
-  </div>
+  </header>
+  <!-------------------⬆ --- SECTION 01: NAVBAR -- ⬆------------------->
 
-  <div class="hp-copyright mt-4">
-    <div class="container hp-container-cap">
-      <small>
-        WIZARDING WORLD characters, names, and related indicia are © &amp; ™ Warner Bros. Entertainment Inc. © &amp; ™ WBEI. Publishing Rights © JKR. FEVER is an original license © 2026
-        <a href="https://business.feverup.com/" target="_blank" rel="noopener">FEVER</a>
-        <a href="https://hpforbiddenforestexperience.com/" target="_blank" rel="noopener">Privacy Policy</a>
-      </small>
+  <!-------------------⬇ --- SECTION 02: HERO -- ⬇------------------->
+  <section id="hero" class="hp-hero">
+    <!--HERO MEDIA (IMAGE & VIDEO)-->
+    <div class="hp-hero__media">
+      <picture>
+        <source media="(max-width: 900px)" srcset="assets/02-hero/videos/02-hero-video-poster-mobile-360x640.webp">
+        <img src="assets/02-hero/videos/02-hero-video-poster-desktop-1080x608.webp"
+          alt="Nighttime forest lit by floating lanterns" class="object-fit-cover">
+      </picture>
+      <video class="object-fit-cover" autoplay loop muted playsinline
+        poster="assets/02-hero/videos/02-hero-video-poster-desktop-1080x608.webp">
+        <source
+          src="https://hpforbiddenforestexperience.com/assets/videos/CR-HPAFFE-ACQ-WL-LPHero-P1-16x9-BNE-ENG_zpmk98.webm"
+          type="video/webm">
+        <source
+          src="https://hpforbiddenforestexperience.com/assets/videos/CR-HPAFFE-ACQ-WL-LPHero-P1-16x9-BNE-ENG_zpmk98.mp4"
+          type="video/mp4">
+      </video>
     </div>
-  </div>
-</footer>
-<!-------------------⬆ --- SECTION 10: FOOTER -- ⬆------------------->
+    <!--HERO CONTENT-->
+    <div class="hp-hero__content container hp-container-cap text-center py-5 mt-5">
+      <!--MAIN EVENT LOGO-->
+      <img src="assets/00-universal/images/00-event-logo-stacked-944x610.svg"
+        alt="Harry Potter: A Forbidden Forest Experience logo" class="hp-hero__logo mb-3" width="350" height="226"
+        fetchpriority="high">
+      <!--TAGLINE-->
+      <p class="hp-hero__tagline mb-4">Prepare for the most magical of walks!</p>
+      <!--CTA BUTTON-->
+      <a href="#city-selector" class="btn btn-hp-primary mb-5">Available cities</a>
+      <!--FEATURE ICONS-->
+      <div class="d-flex justify-content-center gap-4 gap-md-5 flex-wrap">
+        <span class="d-flex align-items-center gap-2">
+          <img src="assets/02-hero/images/02-icon-interactive-45x43.svg" alt="Interactive" class="hp-hero__icon"
+            width="60" height="57">
+          <span class="hp-hero__icon-label">Interactive</span>
+        </span>
+        <span class="d-flex align-items-center gap-2">
+          <img src="assets/02-hero/images/02-icon-family-friendly-40x43.svg" alt="Family friendly" class="hp-hero__icon"
+            width="60" height="65">
+          <span class="hp-hero__icon-label">Family friendly</span>
+        </span>
+        <span class="d-flex align-items-center gap-2">
+          <img src="assets/02-hero/images/02-icon-outdoor-trail-43x43.svg" alt="Outdoors" class="hp-hero__icon"
+            width="60" height="60">
+          <span class="hp-hero__icon-label">Outdoor Trail</span>
+        </span>
+      </div>
+    </div>
+  </section>
+  <!-------------------⬆ --- SECTION 02: HERO -- ⬆------------------->
 
-<!-------------------⬇ --- SECTION 11: COOKIE BANNER -- ⬇------------------->
-<div class="hp-cookiebar alert alert-dismissible fade show mb-0 rounded-0 border-0" role="region" aria-label="Cookie notice">
-  <div class="container hp-container-cap d-flex flex-column flex-md-row align-items-md-center gap-3 py-2">
-    <p class="mb-0 flex-grow-1">
-      We use cookies to enhance browsing experience, personalized ads &amp; content based on your interests and collect
-      statistics in accordance with our cookie policy which you might find below. You can also revoke your consent to
-      our use of cookies in the future through our Cookie Settings.
-    </p>
-    <button type="button" class="btn btn-outline-light btn-hp-cookie flex-shrink-0" data-bs-dismiss="alert">Cookies Settings</button>
-  </div>
-  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-<!-------------------⬆ --- SECTION 11: COOKIE BANNER -- ⬆------------------->
+  <!-------------------⬇ --- SECTION 03: INTRO -- ⬇------------------->
+  <section id="intro" class="hp-intro">
+    <div class="container hp-container-cap text-center position-relative py-5">
+      <!--TITLE-->
+      <h1 class="hp-intro__title mb-3">Harry Potter: A Forbidden Forest Experience</h1>
+      <!--FLOURISH DIVIDER-->
+      <p class="mb-4"><img src="assets/00-universal/images/00-divider-flourish-312x34.svg" alt=""
+          class="hp-flourish img-fluid" title="text decoration"></p>
+      <!--DESCRIPTION-->
+      <p class="mx-auto col-md-8">A nighttime woodland trail filled with magical creatures and wizarding wonders from
+        the Harry Potter™ and Fantastic Beasts™ films.</p>
+      <p class="mx-auto col-md-8">Set in beautiful woodland, this experience has been brought to life by award-winning
+        theatrical designers and experiential creators.</p>
+      <p class="mx-auto col-md-8">Find your nearest city and enjoy Harry Potter: A Forbidden Forest Experience now!</p>
+      <!--PARALLAX MOON-->
+      <div class="hp-moon-container" aria-hidden="true">
+        <div class="hp-moon"></div>
+      </div>
+    </div>
+  </section>
+  <!-------------------⬆ --- SECTION 03: INTRO -- ⬆------------------->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-------------------⬇ --- SECTION 04: MILESTONES -- ⬇------------------->
+  <section id="milestones" class="hp-milestones">
+    <div class="container hp-container-cap py-5">
+      <!--STAT MEDALLIONS-->
+      <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+        <div class="col">
+          <div class="hp-milestones__card d-flex flex-column align-items-center">
+            <img src="assets/04-milestones/images/04-stat-visitors-900x900.webp" alt="International visitors"
+              class="hp-milestones__image img-fluid" width="900" height="900" loading="lazy">
+            <span class="hp-milestones__number mt-2">2M</span>
+            <p class="mb-0">international visitors</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="hp-milestones__card d-flex flex-column align-items-center">
+            <img src="assets/04-milestones/images/04-stat-trees-900x900.webp" alt="Trees planted"
+              class="hp-milestones__image img-fluid" width="900" height="900" loading="lazy">
+            <span class="hp-milestones__number mt-2">+99k</span>
+            <p class="mb-0">trees planted</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="hp-milestones__card d-flex flex-column align-items-center">
+            <img src="assets/04-milestones/images/04-stat-cities-900x900.webp" alt="Cities"
+              class="hp-milestones__image img-fluid" width="900" height="900" loading="lazy">
+            <span class="hp-milestones__number mt-2">4 <strong>continents</strong>, 16 <strong>cities</strong></span>
+            <p class="mb-0">and counting</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-------------------⬆ --- SECTION 04: MILESTONES -- ⬆------------------->
+
+  <!-------------------⬇ --- SECTION 05: CITY SELECTOR -- ⬇------------------->
+  <section id="city-selector" class="hp-city-panel">
+    <div class="container hp-container-cap py-5">
+      <!--SECTION TITLE-->
+      <h2 class="hp-section-title font-h2 text-center mb-4">Available cities</h2>
+      <!--AVAILABLE CITIES GRID-->
+      <div class="row row-cols-2 row-cols-md-3 row-cols-xl-5 g-4 justify-content-center">
+        <div class="col">
+          <a class="hp-city__link d-flex flex-column gap-3 text-center"
+            href="https://hpforbiddenforestexperience.com/perth/" aria-label="Change city to Perth">
+            <h3 class="hp-city__name font-h3 mb-0">Perth</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--available">Available</span>
+              <img src="assets/05-city-selector/images/05-city-perth-250x250.png" alt="Perth" class="img-fluid"
+                width="250" height="250" loading="lazy">
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-------------------⬆ --- SECTION 05: CITY SELECTOR -- ⬆------------------->
+
+  <!-------------------⬇ --- SECTION 06: FINISHED EXPERIENCES -- ⬇------------------->
+  <section id="finished-experiences" class="hp-city-panel">
+    <div class="container hp-container-cap py-5">
+      <!--SECTION TITLE-->
+      <h2 class="hp-section-title font-h2 text-center mb-4">Past Experiences</h2>
+      <!--PAST CITIES GRID-->
+      <div class="row row-cols-2 row-cols-md-3 row-cols-xl-5 g-4 justify-content-center">
+        <!--Austin-->
+        <div class="col">
+          <span class="hp-city__link d-flex flex-column gap-3 text-center">
+            <h3 class="hp-city__name font-h3 mb-0">Austin</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-austin-250x250.png" alt="Austin" class="img-fluid"
+                width="250" height="250" loading="lazy">
+            </span>
+          </span>
+        </div>
+        <!--Montauban-->
+        <div class="col">
+          <span class="hp-city__link d-flex flex-column gap-3 text-center">
+            <h3 class="hp-city__name font-h3 mb-0">Montauban</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-montauban-250x250.png" alt="Montauban"
+                class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </span>
+        </div>
+        <!--Leesburg-->
+        <div class="col">
+          <span class="hp-city__link d-flex flex-column gap-3 text-center">
+            <h3 class="hp-city__name font-h3 mb-0">Leesburg</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-leesburg-250x250.png" alt="Leesburg"
+                class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </span>
+        </div>
+        <!--Little Elm-->
+        <div class="col">
+          <span class="hp-city__link d-flex flex-column gap-3 text-center">
+            <h3 class="hp-city__name font-h3 mb-0">Little Elm, TX</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-little-elm-250x250.png" alt="Little Elm, TX"
+                class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </span>
+        </div>
+        <!--Groenenberg-->
+        <div class="col">
+          <span class="hp-city__link d-flex flex-column gap-3 text-center">
+            <h3 class="hp-city__name font-h3 mb-0">Groenenberg</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-groenenberg-250x250.png" alt="Groenenberg"
+                class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </span>
+        </div>
+        <!--Cheshire-->
+        <div class="col">
+          <span class="hp-city__link d-flex flex-column gap-3 text-center">
+            <h3 class="hp-city__name font-h3 mb-0">Cheshire</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-cheshire-250x250.png" alt="Cheshire"
+                class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </span>
+        </div>
+        <!--Westchester-->
+        <div class="col">
+          <span class="hp-city__link d-flex flex-column gap-3 text-center">
+            <h3 class="hp-city__name font-h3 mb-0">Westchester, NY</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-westchester-250x250.png" alt="Westchester, NY"
+                class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </span>
+        </div>
+        <!--Singapore-->
+        <div class="col">
+          <span class="hp-city__link d-flex flex-column gap-3 text-center">
+            <h3 class="hp-city__name font-h3 mb-0">Singapore</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-singapore-250x250.png" alt="Singapore"
+                class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </span>
+        </div>
+        <!--Melbourne-->
+        <div class="col">
+          <span class="hp-city__link d-flex flex-column gap-3 text-center">
+            <h3 class="hp-city__name font-h3 mb-0">Melbourne</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-melbourne-250x250.png" alt="Melbourne"
+                class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </span>
+        </div>
+        <!--Brisbane-->
+        <div class="col">
+          <span class="hp-city__link d-flex flex-column gap-3 text-center">
+            <h3 class="hp-city__name font-h3 mb-0">Brisbane</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-brisbane-250x250.png" alt="Brisbane"
+                class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </span>
+        </div>
+        <!--Chicago-->
+        <div class="col">
+          <span class="hp-city__link d-flex flex-column gap-3 text-center">
+            <h3 class="hp-city__name font-h3 mb-0">Chicago</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-chicago-250x250.png" alt="Chicago"
+                class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </span>
+        </div>
+        <!--Cincinnati-->
+        <div class="col">
+          <span class="hp-city__link d-flex flex-column gap-3 text-center">
+            <h3 class="hp-city__name font-h3 mb-0">Cincinnati</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-cincinnati-250x250.png" alt="Cincinnati"
+                class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </span>
+        </div>
+        <!--Vancouver-->
+        <div class="col">
+          <span class="hp-city__link d-flex flex-column gap-3 text-center">
+            <h3 class="hp-city__name font-h3 mb-0">Vancouver</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-austin-250x250.png" alt="Vancouver"
+                class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </span>
+        </div>
+        <!--Singapore-->
+        <div class="col">
+          <span class="hp-city__link d-flex flex-column gap-3 text-center">
+            <h3 class="hp-city__name font-h3 mb-0">深圳</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-singapore-250x250.png" alt="Shenzhen"
+                class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </span>
+        </div>
+        <!--Groenberg-->
+        <div class="col">
+          <span class="hp-city__link d-flex flex-column gap-3 text-center">
+            <h3 class="hp-city__name font-h3 mb-0">Santiago</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-groenenberg-250x250.png" alt="Santiago"
+                class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </span>
+        </div>
+        <!--/hp-finished-->
+      </div>
+      <!--/hp-finished-city-container-->
+    </div>
+    <!--/hp-container-cap-->
+  </section>
+  <!-------------------⬆ --- SECTION 06: FINISHED EXPERIENCES -- ⬆------------------->
+
+
+
+  <!-------------------⬇ --- SECTION 07: PRESS -- ⬇------------------->
+  <section id="press" class="hp-press">
+    <div class="container hp-container-cap py-5">
+      <!--SECTION TITLE-->
+      <h2 class="hp-section-title font-h2 text-center mb-2">What the Press is Saying</h2>
+      <!--FLOURISH DIVIDER-->
+      <p class="text-center mb-5"><img src="assets/00-universal/images/00-divider-flourish-312x34.svg" alt=""
+          class="hp-flourish img-fluid" title="text decoration"></p>
+
+      <!--PRESS CAROUSEL-->
+      <!-- Bootstrap 5 interactive carousel containing paraphrased coverage cards from media outlets -->
+      <div id="pressCarousel" class="carousel slide hp-press__carousel position-relative px-4 px-md-5" data-bs-ride="carousel">
+        <!--CAROUSEL INNER (SLIDES CONTAINER)-->
+        <div class="carousel-inner">
+
+          <!--SLIDE 1 (OUTLETS 1 TO 3)-->
+          <div class="carousel-item active">
+            <div class="row row-cols-1 row-cols-md-3 g-4 px-0 align-items-stretch">
+              <!--PRESS CARD 1: URBAN LIST-->
+              <div class="col text-center d-flex flex-column">
+                <figure class="hp-press__card mb-0 flex-grow-1">
+                  <img src="assets/07-press/images/07-press-urban-list-273x100.png" alt="Urban List"
+                    class="hp-press__logo mb-3 d-block mx-auto" width="273" height="100" loading="lazy">
+                  <figcaption class="hp-press__quote">Reports that after selling out across the USA and UK, the official
+                    experience set out to enchant the Mornington Peninsula in April 2024.</figcaption>
+                </figure>
+              </div>
+
+              <!--PRESS CARD 2: TIME OUT-->
+              <div class="col text-center d-flex flex-column">
+                <figure class="hp-press__card mb-0 flex-grow-1">
+                  <img src="assets/07-press/images/07-press-time-out-263x100.png" alt="Time Out"
+                    class="hp-press__logo mb-3 d-block mx-auto" width="263" height="100" loading="lazy">
+                  <figcaption class="hp-press__quote">Tells Melbourne readers to grab wands and house ties for a
+                    brand-new experience it calls a dream outing for any Potterhead.</figcaption>
+                </figure>
+              </div>
+
+              <!--PRESS CARD 3: CONCRETE PLAYGROUND-->
+              <div class="col text-center d-flex flex-column">
+                <figure class="hp-press__card mb-0 flex-grow-1">
+                  <img src="assets/07-press/images/07-press-concrete-playground-453x100.png" alt="Concrete Playground"
+                    class="hp-press__logo mb-3 d-block mx-auto" width="453" height="100" loading="lazy">
+                  <figcaption class="hp-press__quote">Describes an after-dark forest where visitors don't just watch the
+                    wizarding world — they join in, as every aspiring Hogwarts student has wanted to.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!--SLIDE 2 (OUTLETS 4 TO 6)-->
+          <div class="carousel-item">
+            <div class="row row-cols-1 row-cols-md-3 g-4 px-0 align-items-stretch">
+              <!--PRESS CARD 4: SUNRISE-->
+              <div class="col text-center d-flex flex-column">
+                <figure class="hp-press__card mb-0 flex-grow-1">
+                  <img src="assets/07-press/images/07-press-sunrise-188x100.png" alt="Sunrise"
+                    class="hp-press__logo mb-3 d-block mx-auto" width="188" height="100" loading="lazy">
+                  <figcaption class="hp-press__quote">Covers the Melbourne arrival, with around 3,000 tickets selling a
+                    day and organisers planning to take the wizarding world around the country.</figcaption>
+                </figure>
+              </div>
+
+              <!--PRESS CARD 5: CHANNEL 9 NEWS-->
+              <div class="col text-center d-flex flex-column">
+                <figure class="hp-press__card mb-0 flex-grow-1">
+                  <img src="assets/07-press/images/07-press-channel9-295x50.png" alt="Channel 9 News"
+                    class="hp-press__logo mb-3 d-block mx-auto" width="295" height="50" loading="lazy">
+                  <figcaption class="hp-press__quote">Highlights the Mornington Peninsula trail's familiar characters
+                    and creatures, nearly 30 years after Harry Potter fever first swept the globe.</figcaption>
+                </figure>
+              </div>
+
+              <!--PRESS CARD 6: 10 NEWS FIRST-->
+              <div class="col text-center d-flex flex-column">
+                <figure class="hp-press__card mb-0 flex-grow-1">
+                  <img src="assets/07-press/images/07-press-10-news-first-100x100.png" alt="10 News First"
+                    class="hp-press__logo mb-3 d-block mx-auto" width="100" height="100" loading="lazy">
+                  <figcaption class="hp-press__quote">Reports on the world-travelling immersive experience opening in
+                    Melbourne, bringing fans up close to beloved faces from the books.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--CAROUSEL INDICATORS (DOT NAVIGATION)-->
+        <div class="carousel-indicators position-static mt-4">
+          <button type="button" data-bs-target="#pressCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Press slide 1"></button>
+          <button type="button" data-bs-target="#pressCarousel" data-bs-slide-to="1"
+            aria-label="Press slide 2"></button>
+        </div>
+
+        <!--CAROUSEL CONTROLS (PREVIOUS & NEXT ARROWS)-->
+
+        <!--PREVIOUS BUTTON-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#pressCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <!--NEXT BUTTON-->
+        <button class="carousel-control-next" type="button" data-bs-target="#pressCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!--/hp-press-carousel-->
+    </div>
+    <!--/hp-container-cap-->
+  </section>
+
+  <!-------------------⬆ --- SECTION 07: PRESS -- ⬆------------------->
+
+  <!-------------------⬇ --- SECTION 08: SORTING HAT -- ⬇------------------->
+  <section id="sorting-hat">
+    <!--container for section-->
+    <div class="container hp-container-cap py-5 text-center">
+      <!--SECTION TITLE-->
+      <h2 class="hp-section-title font-h2 mb-2">Sorting Hat™ Quiz</h2>
+      <!--FLOURISH DIVIDER-->
+      <p class="mb-4"><img src="assets/00-universal/images/00-divider-flourish-312x34.svg" alt=""
+          class="hp-flourish img-fluid" title="text decoration"></p>
+      <!--QUIZ SUBTITLE-->
+      <h3 class="font-h3 mb-4">Do you know which Hogwarts™ house you belong to?</h3>
+      <!--CTA BUTTON-->
+      <a href="https://www.harrypotter.com/sorting-hat" target="_blank" rel="noopener"
+        class="btn btn-hp-primary">Discover</a>
+    </div>
+    <!--/container-->
+  </section>
+
+  <!-------------------⬆ --- SECTION 08: SORTING HAT -- ⬆------------------->
+
+  <!-------------------⬇ --- SECTION 09: FIREFLY EFFECT -- ⬇------------------->
+  <section id="firefly-effect" class="hp-firefly-field" aria-hidden="true">
+    <!--ANIMATED FIREFLIES-->
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+  </section>
+  <!-------------------⬆ --- SECTION 09: FIREFLY EFFECT -- ⬆------------------->
+
+  <!-------------------⬇ --- SECTION 10: FOOTER -- ⬇------------------->
+  <footer id="footer" class="hp-footer text-center pt-5">
+    <div class="container hp-container-cap d-flex flex-column align-items-center gap-4 pt-5">
+      <!--FOOTER LOGO-->
+      <img src="assets/00-universal/images/00-event-logo-stacked-944x610.svg"
+        alt="Harry Potter: Forbidden Forest Experience" class="hp-footer__logo" width="232" height="150" loading="lazy">
+
+      <!--PARTNER LOGOS-->
+      <div>
+        <p class="hp-footer__partners-title mb-3">Presented by</p>
+        <div class="d-flex align-items-center justify-content-center gap-4">
+          <img src="assets/10-footer/images/10-partner-wb-150x155.png" alt="WB Logo" width="150" height="155"
+            loading="lazy">
+          <img src="assets/10-footer/images/10-partner-fever-552x170.svg" alt="Fever Logo" width="150" height="46"
+            loading="lazy">
+        </div>
+      </div>
+
+      <!--SOCIAL LINKS-->
+      <ul class="list-unstyled d-flex gap-4 mb-0">
+        <!--FACEBOOK LINK-->
+        <li>
+          <a href="https://www.facebook.com/HPforbiddenforestexperience/" target="_blank" rel="noopener nofollow"
+            aria-label="Facebook">
+            <svg class="hp-social-icon" viewBox="0 0 320 512" role="img" aria-hidden="true">
+              <path
+                d="M80 299.3V512h116V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+            </svg>
+          </a>
+        </li>
+        <!--INSTAGRAM LINK-->
+        <li>
+          <a href="https://www.instagram.com/hpforbiddenforestexperience/" target="_blank" rel="noopener nofollow"
+            aria-label="Instagram">
+            <svg class="hp-social-icon" viewBox="0 0 448 512" role="img" aria-hidden="true">
+              <path
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+            </svg>
+          </a>
+        </li>
+      </ul> <!--/list-->
+
+      <!--FOOTER NAVIGATION-->
+      <nav aria-label="Footer">
+        <ul class="list-unstyled d-flex flex-wrap justify-content-center gap-4 mb-0">
+          <li><a class="hp-footer__nav-link" href="https://support.feverup.com/hc/en-us/requests/new" target="_blank"
+              rel="noopener">Contact</a></li>
+          <li><a class="hp-footer__nav-link" href="https://business.feverup.com/ambassadors-influencers/"
+              target="_blank" rel="noopener">Influencers</a></li>
+          <li><a class="hp-footer__nav-link" href="mailto:press@hpforbiddenforestexperience.com">Press</a></li>
+          <li><a class="hp-footer__nav-link" href="https://business.feverup.com/affiliates/" target="_blank"
+              rel="noopener">Affiliates</a></li>
+          <li><a class="hp-footer__nav-link" href="https://business.feverup.com/licensing/" target="_blank"
+              rel="noopener">Licensing</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!--COPYRIGHT BAR-->
+    <div class="hp-copyright mt-4">
+      <div class="container hp-container-cap">
+        <small>
+          WIZARDING WORLD characters, names, and related indicia are © &amp; ™ Warner Bros. Entertainment Inc. © &amp; ™
+          WBEI. Publishing Rights © JKR. FEVER is an original license © 2026
+          <a href="https://business.feverup.com/" target="_blank" rel="noopener">FEVER</a>
+          <a href="https://hpforbiddenforestexperience.com/" target="_blank" rel="noopener">Privacy Policy</a>
+        </small>
+      </div>
+    </div>
+  </footer>
+  <!-------------------⬆ --- SECTION 10: FOOTER -- ⬆------------------->
+
+  <!-------------------⬇ --- SECTION 11: COOKIE BANNER (DISABLED) -- ⬇------------------->
+  <!--
+  <div class="hp-cookiebar alert alert-dismissible fade show mb-0 rounded-0 border-0" role="region"
+    aria-label="Cookie notice">
+    <div class="container hp-container-cap d-flex flex-column flex-md-row align-items-md-center gap-3 py-2">
+      <p class="mb-0 flex-grow-1">
+        We use cookies to enhance browsing experience, personalized ads &amp; content based on your interests and
+        collect
+        statistics in accordance with our cookie policy which you might find below. You can also revoke your consent to
+        our use of cookies in the future through our Cookie Settings.
+      </p>
+      <button type="button" class="btn btn-outline-light btn-hp-cookie flex-shrink-0" data-bs-dismiss="alert">Cookies
+        Settings</button>
+    </div>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  -->
+  <!-------------------⬆ --- SECTION 11: COOKIE BANNER -- ⬆------------------->
+
+  <!--SCRIPTS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
