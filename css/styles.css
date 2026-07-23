@@ -13,6 +13,14 @@
    SECTION 09: FIREFLY EFFECT    — drift / flash keyframe swarm
    SECTION 10: FOOTER            — treeline background, partners, parchment bar
    SECTION 11: COOKIE BANNER     — fixed bottom overlay
+   SECTION 12: GALLERY           — full-bleed image carousel (Perth)
+   SECTION 13: TICKETS           — practical info list over dark bg (Perth)
+   SECTION 14: GROUPS            — offer card grid (Perth)
+   SECTION 15: GIFTCARD          — image + copy split with dark surface (Perth)
+   SECTION 16: REVIEWS           — quote carousel with 5-star row (Perth)
+   SECTION 17: LOCATION          — address, directions button, Google Map iframe (Perth)
+   SECTION 18: FAQS              — accordion (Perth)
+   SECTION 19: CLOSED-CITIES     — big closed-city banner + tile grid (Closed page)
    ========================================================================== */
 
 /* ==========================================================================
@@ -536,4 +544,288 @@ body {
   --bs-btn-hover-color: var(--hp-ink);
   --bs-btn-hover-bg: var(--hp-parchment);
   --bs-btn-font-size: .8125rem;
+}
+
+/* ==========================================================================
+   SECTION 12: GALLERY (Perth "The Experience" carousel)
+   ========================================================================== */
+
+.hp-gallery {
+  background-color: var(--hp-bg-navy);
+  color: var(--hp-white);
+}
+.hp-gallery__slide {
+  border-radius: 2rem;
+  overflow: hidden;
+  background-color: var(--hp-bg-dark);
+  aspect-ratio: 16 / 9;
+  position: relative;
+}
+.hp-gallery__slide img,
+.hp-gallery__slide video {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.hp-gallery__caption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 1.5rem;
+  background: linear-gradient(0deg, rgba(2,10,23,.85) 0%, rgba(2,10,23,0) 100%);
+  color: var(--hp-white);
+  font-family: var(--hp-font-display);
+  font-size: 1.5rem;
+}
+.hp-gallery .carousel-indicators [data-bs-target] {
+  width: .5rem; height: .5rem; border-radius: 50%; background: var(--hp-white);
+}
+.hp-gallery .carousel-indicators .active { background: var(--hp-fever-yellow); }
+
+/* ==========================================================================
+   SECTION 13: TICKETS / PRACTICAL INFO (Perth)
+   ========================================================================== */
+
+/* Live inline bg: radial-gradient centre-transparent → #020a17 + treeline image */
+.hp-tickets {
+  background:
+    radial-gradient(50% 50% at 50% 50%, rgba(0,0,0,0) 0%, #020a17 100%),
+    url(../assets/13-tickets/images/13-bg-tickets-1800x830.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--hp-white);
+}
+.hp-tickets__list { list-style: none; padding-left: 0; margin: 0; }
+.hp-tickets__item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: .75rem 0;
+  border-bottom: 1px solid #ffffff1a;
+}
+.hp-tickets__item:last-child { border-bottom: 0; }
+.hp-tickets__icon {
+  flex-shrink: 0;
+  width: 2rem; height: 2rem;
+  border-radius: 50%;
+  background: var(--hp-gold);
+  color: var(--hp-white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+.hp-tickets__label {
+  font-family: var(--hp-font-display);
+  color: var(--hp-ice);
+  font-size: 1.125rem;
+  display: block;
+}
+.hp-tickets__value {
+  color: var(--hp-white);
+  font-size: .9375rem;
+}
+
+/* ==========================================================================
+   SECTION 14: GROUPS (offer cards)
+   ========================================================================== */
+
+.hp-groups { background-color: var(--hp-bg-dark); color: var(--hp-white); }
+.hp-offer {
+  background-color: var(--hp-bg-navy);
+  border: 1px solid var(--hp-ice);
+  border-radius: 2rem;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.hp-offer__image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.hp-offer__body {
+  padding: 1.25rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  flex: 1;
+}
+.hp-offer__title {
+  font-family: var(--hp-font-display);
+  color: var(--hp-ice);
+  font-size: 1.125rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.hp-offer__desc { font-size: .9375rem; margin: 0; flex: 1; }
+.hp-offer__cta { margin-top: .75rem; align-self: flex-start; }
+
+/* ==========================================================================
+   SECTION 15: GIFTCARD
+   ========================================================================== */
+
+.hp-giftcard {
+  background-color: var(--hp-bg-dark);
+  color: var(--hp-white);
+  position: relative;
+  overflow: hidden;
+}
+.hp-giftcard__image {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 .5rem 1.5rem #00000080);
+}
+.hp-giftcard__title {
+  font-family: var(--hp-font-display);
+  color: var(--hp-ice);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.hp-giftcard__desc { font-size: 1.125rem; margin-bottom: 1.5rem; max-width: 32rem; }
+
+/* ==========================================================================
+   SECTION 16: REVIEWS
+   ========================================================================== */
+
+.hp-reviews {
+  background-color: var(--hp-bg-navy);
+  color: var(--hp-white);
+}
+.hp-reviews__card {
+  background-color: var(--hp-bg-dark);
+  border: 1px solid #ffffff1a;
+  border-radius: 2rem;
+  padding: 2rem 1.75rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.hp-reviews__name {
+  font-family: var(--hp-font-display);
+  color: var(--hp-ice);
+  font-size: 1.125rem;
+  margin: 0;
+}
+.hp-reviews__text { font-size: 1rem; margin: 0; flex: 1; }
+.hp-reviews__stars {
+  color: var(--hp-fever-yellow);
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+.hp-reviews .carousel-indicators [data-bs-target] {
+  width: .5rem; height: .5rem; border-radius: 50%; background: var(--hp-white);
+}
+.hp-reviews .carousel-indicators .active { background: var(--hp-fever-yellow); }
+
+/* ==========================================================================
+   SECTION 17: LOCATION
+   ========================================================================== */
+
+.hp-location {
+  background-color: var(--hp-bg-dark);
+  color: var(--hp-white);
+}
+.hp-location__title {
+  font-family: var(--hp-font-display);
+  color: var(--hp-ice);
+  font-size: 1.75rem;
+}
+.hp-location__title a { color: inherit; text-decoration: none; }
+.hp-location__address { font-size: 1rem; margin-bottom: 1.25rem; }
+.btn-hp-underline {
+  background: none;
+  border: 0;
+  border-bottom: 2px solid var(--hp-gold);
+  color: var(--hp-white);
+  border-radius: 0;
+  padding: .25rem 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .875rem;
+  transition: color .3s ease, border-color .3s ease;
+}
+.btn-hp-underline:hover { color: var(--hp-ice); border-color: var(--hp-ice); }
+.hp-map-frame {
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 1px solid var(--hp-ice);
+  aspect-ratio: 16 / 10;
+}
+.hp-map-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+/* ==========================================================================
+   SECTION 18: FAQS (accordion)
+   ========================================================================== */
+
+.hp-faqs { background-color: var(--hp-bg-navy); color: var(--hp-white); }
+.hp-faqs__group-title {
+  font-family: var(--hp-font-display);
+  color: var(--hp-ice);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.hp-faqs .accordion {
+  --bs-accordion-bg: transparent;
+  --bs-accordion-color: var(--hp-white);
+  --bs-accordion-border-color: #ffffff2a;
+  --bs-accordion-btn-color: var(--hp-white);
+  --bs-accordion-btn-bg: transparent;
+  --bs-accordion-active-color: var(--hp-ice);
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 .25rem #bd9e6355;
+  --bs-accordion-btn-icon-transform: rotate(-180deg);
+}
+.hp-faqs .accordion-button::after {
+  filter: invert(1) brightness(1.4);
+}
+.hp-faqs .accordion-button:not(.collapsed)::after {
+  filter: invert(83%) sepia(45%) saturate(300%) hue-rotate(150deg);
+}
+.hp-faqs .accordion-item + .accordion-item { margin-top: .5rem; }
+
+/* ==========================================================================
+   SECTION 19: CLOSED-CITIES page — "This city is now closed"
+   ========================================================================== */
+
+.hp-closed {
+  background-color: var(--hp-bg-navy);
+  color: var(--hp-white);
+  min-height: 100vh;
+}
+.hp-closed__banner {
+  background: linear-gradient(180deg, rgba(2,10,23,.9), rgba(16,24,49,.9)),
+              url(../assets/00-universal/images/00-bg-stars-1512x1023.webp) center/cover no-repeat;
+  padding: 6rem 1rem 4rem;
+  text-align: center;
+  border-bottom: 1px solid #ffffff1a;
+}
+.hp-closed__badge {
+  display: inline-block;
+  padding: .5rem 1rem;
+  background: var(--hp-status-finished);
+  color: var(--hp-white);
+  border-radius: 999px;
+  font-size: .8125rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.hp-closed__title {
+  font-family: var(--hp-font-display);
+  color: var(--hp-ice);
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.hp-closed__lede {
+  font-size: 1.125rem;
+  max-width: 34rem;
+  margin: 0 auto 2rem;
+}
+@media (max-width: 600px) {
+  .hp-closed__title { font-size: 2rem; }
 }

@@ -1,16 +1,610 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
+<!-------------------⬇ --- SECTION 00: HEAD TAG DATA -- ⬇------------------->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--TITLE--> <title>Harry Potter: A Forbidden Forest Experience in Perth</title>
+  <!--DESCRIPTION--> <meta name="description" content="Bootstrap 5 practice rebuild of the Perth city page — nighttime woodland trail at Hedley Jorgensen Park, Kalamunda WA.">
+  <!--KEYWORDS--> <meta name="keywords" content="harry potter, forbidden forest, perth, kalamunda, tickets, bootstrap clone">
+  <!--ICON-->
+  <link rel="icon" type="image/x-icon" href="assets/00-universal/images/00-favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/00-universal/images/00-favicon-32-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/00-universal/images/00-favicon-16-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/00-universal/images/00-apple-touch-icon-180x180.png">
+  <link rel="mask-icon" href="assets/00-universal/images/00-safari-pinned-tab-500x500.svg" color="#ffffff">
+  <!--OPEN GRAPH-->
+  <meta property="og:title" content="Harry Potter: A Forbidden Forest Experience in Perth">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/00-universal/images/00-og-image-2890x1722.jpg">
+  <!--STYLESHEETS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+<!-------------------⬆ --- SECTION 00: HEAD TAG DATA -- ⬆------------------->
 
 <body>
+<!--
+  ============================== DEV TABLE OF CONTENTS (Perth) ==============================
+  SECTION 00  HEAD                     meta, favicons, stylesheets
+  SECTION 01  NAVBAR                   #navbar    — black bar with section anchor menu + TICKETS CTA
+  SECTION 02  HERO                     #hero      — remote video + local poster, CTA, icons
+  SECTION 03  INTRO                    #intro     — starfield + moon, Perth-specific copy
+  SECTION 04  MILESTONES               #milestones — 3 stat cards
+  SECTION 12  GALLERY                  #gallery   — "The Experience" 4-slide carousel
+  SECTION 13  TICKETS / PRACTICAL INFO #tickets   — 6 info items over treeline bg
+  SECTION 14  GROUPS                   #groups    — 6 offer cards linking to Fever
+  SECTION 15  GIFTCARD                 #giftcard  — image + copy + Fever CTA
+  SECTION 16  REVIEWS                  #reviews   — 5-star carousel of visitor quotes
+  SECTION 17  LOCATION                 #location  — address + directions + live Google Map iframe
+  SECTION 18  FAQS                     #faqs      — accordion of common questions
+  SECTION 09  FIREFLY EFFECT           #firefly-effect
+  SECTION 10  FOOTER                   #footer
+  SECTION 11  COOKIE BANNER
+  ===========================================================================================
+-->
 
+<!-------------------⬇ --- SECTION 01: NAVBAR -- ⬇------------------->
+<header id="navbar">
+  <nav class="navbar navbar-expand-lg fixed-top hp-navbar" aria-label="Main">
+    <div class="container-fluid hp-container-cap px-3">
+      <a class="navbar-brand py-0" href="index.html" aria-label="Go to homepage">
+        <img src="assets/00-universal/images/00-event-logo-stacked-944x610.svg" alt="Harry Potter: Forbidden Forest Experience" width="77" height="50">
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#perthNav" aria-controls="perthNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="perthNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3 my-3 my-lg-0">
+          <li class="nav-item order-lg-2"><a href="https://feverup.com/m/584493" target="_blank" rel="noopener" class="btn btn-hp-primary">Tickets</a></li>
+          <li class="nav-item"><a class="nav-link text-uppercase text-white small" href="#gallery">The Experience</a></li>
+          <li class="nav-item"><a class="nav-link text-uppercase text-white small" href="#tickets">Practical Info</a></li>
+          <li class="nav-item"><a class="nav-link text-uppercase text-white small" href="#groups">Groups</a></li>
+          <li class="nav-item"><a class="nav-link text-uppercase text-white small" href="#giftcard">Gift Card</a></li>
+          <li class="nav-item"><a class="nav-link text-uppercase text-white small" href="#reviews">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link text-uppercase text-white small" href="#location">Location</a></li>
+          <li class="nav-item"><a class="nav-link text-uppercase text-white small" href="#faqs">FAQs</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-------------------⬆ --- SECTION 01: NAVBAR -- ⬆------------------->
+
+<!-------------------⬇ --- SECTION 02: HERO -- ⬇------------------->
+<section id="hero" class="hp-hero">
+  <div class="hp-hero__media">
+    <picture>
+      <source media="(max-width: 900px)" srcset="assets/02-hero/videos/02-hero-video-poster-mobile-360x640.webp">
+      <img src="assets/02-hero/videos/02-hero-video-poster-desktop-1080x608.webp" alt="Nighttime forest lit by floating lanterns" class="object-fit-cover">
+    </picture>
+    <video class="object-fit-cover" autoplay loop muted playsinline
+           poster="assets/02-hero/videos/02-hero-video-poster-desktop-1080x608.webp">
+      <source src="https://hpforbiddenforestexperience.com/assets/videos/CR-HPAFFE-ACQ-WL-LPHero-P1-16x9-BNE-ENG_zpmk98.webm" type="video/webm">
+      <source src="https://hpforbiddenforestexperience.com/assets/videos/CR-HPAFFE-ACQ-WL-LPHero-P1-16x9-BNE-ENG_zpmk98.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hp-hero__content container hp-container-cap text-center py-5 mt-5">
+    <img src="assets/00-universal/images/00-event-logo-stacked-944x610.svg" alt="Harry Potter: A Forbidden Forest Experience logo" class="hp-hero__logo mb-3" width="350" height="226" fetchpriority="high">
+    <p class="hp-hero__tagline mb-4">Prepare for the most magical of walks!</p>
+    <a href="https://feverup.com/m/584493" target="_blank" rel="noopener" class="btn btn-hp-primary mb-5">Get Tickets</a>
+    <div class="d-flex justify-content-center gap-4 gap-md-5 flex-wrap">
+      <span class="d-flex align-items-center gap-2">
+        <img src="assets/02-hero/images/02-icon-interactive-45x43.svg" alt="Interactive" class="hp-hero__icon" width="60" height="57">
+        <span class="hp-hero__icon-label">Interactive</span>
+      </span>
+      <span class="d-flex align-items-center gap-2">
+        <img src="assets/02-hero/images/02-icon-family-friendly-40x43.svg" alt="Family friendly" class="hp-hero__icon" width="60" height="65">
+        <span class="hp-hero__icon-label">Family friendly</span>
+      </span>
+      <span class="d-flex align-items-center gap-2">
+        <img src="assets/02-hero/images/02-icon-outdoor-trail-43x43.svg" alt="Outdoors" class="hp-hero__icon" width="60" height="60">
+        <span class="hp-hero__icon-label">Outdoor Trail</span>
+      </span>
+    </div>
+  </div>
+</section>
+<!-------------------⬆ --- SECTION 02: HERO -- ⬆------------------->
+
+<!-------------------⬇ --- SECTION 03: INTRO -- ⬇------------------->
+<section id="intro" class="hp-intro">
+  <div class="container hp-container-cap text-center position-relative py-5">
+    <h1 class="hp-intro__title mb-3">Harry Potter: A Forbidden Forest Experience in Perth</h1>
+    <p class="mb-4"><img src="assets/00-universal/images/00-divider-flourish-312x34.svg" alt="" class="hp-flourish img-fluid" title="text decoration"></p>
+    <p class="mx-auto col-md-8"><strong>Wander into a dark woodland, meet magical creatures, cast interactive spells, and revisit unforgettable scenes from the Harry Potter™ film series.</strong></p>
+    <p class="mx-auto col-md-8"><strong>Set in beautiful bushland and shaped by award-winning theatrical designers, the experience runs after sunset along a lit trail.</strong></p>
+    <p class="mx-auto col-md-8"><strong>Join us in the Perth Hills and enjoy Harry Potter: A Forbidden Forest Experience.</strong></p>
+    <div class="hp-moon-container" aria-hidden="true">
+      <div class="hp-moon"></div>
+    </div>
+  </div>
+</section>
+<!-------------------⬆ --- SECTION 03: INTRO -- ⬆------------------->
+
+<!-------------------⬇ --- SECTION 04: MILESTONES -- ⬇------------------->
+<section id="milestones" class="hp-milestones">
+  <div class="container hp-container-cap py-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+      <div class="col">
+        <div class="hp-milestones__card d-flex flex-column align-items-center">
+          <img src="assets/04-milestones/images/04-stat-visitors-900x900.webp" alt="International visitors" class="hp-milestones__image img-fluid" width="900" height="900" loading="lazy">
+          <span class="hp-milestones__number mt-2">2M</span>
+          <p class="mb-0">international visitors</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="hp-milestones__card d-flex flex-column align-items-center">
+          <img src="assets/04-milestones/images/04-stat-trees-900x900.webp" alt="Trees planted" class="hp-milestones__image img-fluid" width="900" height="900" loading="lazy">
+          <span class="hp-milestones__number mt-2">+99k</span>
+          <p class="mb-0">trees planted</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="hp-milestones__card d-flex flex-column align-items-center">
+          <img src="assets/04-milestones/images/04-stat-cities-900x900.webp" alt="Cities" class="hp-milestones__image img-fluid" width="900" height="900" loading="lazy">
+          <span class="hp-milestones__number mt-2">4 <strong>continents</strong>, 16 <strong>cities</strong></span>
+          <p class="mb-0">and counting</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-------------------⬆ --- SECTION 04: MILESTONES -- ⬆------------------->
+
+<!-------------------⬇ --- SECTION 12: GALLERY (The Experience) -- ⬇------------------->
+<section id="gallery" class="hp-gallery">
+  <div class="container hp-container-cap py-5">
+    <h2 class="hp-section-title font-h2 text-center mb-2">The Experience</h2>
+    <p class="text-center mb-4"><img src="assets/00-universal/images/00-divider-flourish-312x34.svg" alt="" class="hp-flourish img-fluid"></p>
+
+    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="hp-gallery__slide">
+            <img src="assets/06-finished-experiences/images/06-city-melbourne-250x250.png" alt="Interactive spellcasting moment">
+            <div class="hp-gallery__caption">Interactive</div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="hp-gallery__slide">
+            <img src="assets/06-finished-experiences/images/06-city-brisbane-250x250.png" alt="A magical creature glowing in the trees">
+            <div class="hp-gallery__caption">Magical Creatures</div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="hp-gallery__slide">
+            <img src="assets/06-finished-experiences/images/06-city-leesburg-250x250.png" alt="Lit outdoor trail through the forest">
+            <div class="hp-gallery__caption">Outdoors</div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="hp-gallery__slide">
+            <img src="assets/06-finished-experiences/images/06-city-cincinnati-250x250.png" alt="Family enjoying the trail together">
+            <div class="hp-gallery__caption">Family friendly</div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-indicators position-static mt-4">
+        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Interactive"></button>
+        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Magical Creatures"></button>
+        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Outdoors"></button>
+        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3" aria-label="Family friendly"></button>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+<!-------------------⬆ --- SECTION 12: GALLERY -- ⬆------------------->
+
+<!-------------------⬇ --- SECTION 13: TICKETS / PRACTICAL INFO -- ⬇------------------->
+<section id="tickets" class="hp-tickets">
+  <div class="container hp-container-cap py-5">
+    <h2 class="hp-section-title font-h2 text-center mb-2">Practical Info</h2>
+    <p class="text-center mb-4"><img src="assets/00-universal/images/00-divider-flourish-312x34.svg" alt="" class="hp-flourish img-fluid"></p>
+
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-8">
+        <ul class="hp-tickets__list">
+          <li class="hp-tickets__item">
+            <span class="hp-tickets__icon" aria-hidden="true">🗓</span>
+            <div>
+              <span class="hp-tickets__label">Dates &amp; times</span>
+              <span class="hp-tickets__value">Pick your date and session directly in the ticket selector.</span>
+            </div>
+          </li>
+          <li class="hp-tickets__item">
+            <span class="hp-tickets__icon" aria-hidden="true">⏱</span>
+            <div>
+              <span class="hp-tickets__label">Duration</span>
+              <span class="hp-tickets__value">Approx. 60–90 minutes (the walking trail itself takes about 45–75 minutes).</span>
+            </div>
+          </li>
+          <li class="hp-tickets__item">
+            <span class="hp-tickets__icon" aria-hidden="true">📍</span>
+            <div>
+              <span class="hp-tickets__label">Location</span>
+              <span class="hp-tickets__value">Hedley Jorgensen Park, Crescent Rd, Kalamunda WA 6076, Australia.</span>
+            </div>
+          </li>
+          <li class="hp-tickets__item">
+            <span class="hp-tickets__icon" aria-hidden="true">🅿</span>
+            <div>
+              <span class="hp-tickets__label">Parking</span>
+              <span class="hp-tickets__value">Offsite parking at S&amp;R Orchard with a free shuttle included; limited accessible parking is available onsite (see FAQs).</span>
+            </div>
+          </li>
+          <li class="hp-tickets__item">
+            <span class="hp-tickets__icon" aria-hidden="true">👨‍👩‍👧</span>
+            <div>
+              <span class="hp-tickets__label">Age requirement</span>
+              <span class="hp-tickets__value">All ages welcome — guests under 16 must be accompanied by an adult.</span>
+            </div>
+          </li>
+          <li class="hp-tickets__item">
+            <span class="hp-tickets__icon" aria-hidden="true">♿</span>
+            <div>
+              <span class="hp-tickets__label">Accessibility</span>
+              <span class="hp-tickets__value">This is a bushland trail — most of the path is not a hard surface. See the FAQs for full accessibility details.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-4 text-center text-lg-start">
+        <p class="mb-3">Tickets are booked through the Fever platform.</p>
+        <a href="https://feverup.com/m/584493" target="_blank" rel="noopener" class="btn btn-hp-primary">Get Tickets</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-------------------⬆ --- SECTION 13: TICKETS -- ⬆------------------->
+
+<!-------------------⬇ --- SECTION 14: GROUPS -- ⬇------------------->
+<section id="groups" class="hp-groups">
+  <div class="container hp-container-cap py-5">
+    <h2 class="hp-section-title font-h2 text-center mb-2">Group Options</h2>
+    <p class="text-center mb-4"><img src="assets/00-universal/images/00-divider-flourish-312x34.svg" alt="" class="hp-flourish img-fluid"></p>
+    <h3 class="font-h3 text-center mb-5">Choose the offer that's right for you.</h3>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div class="col">
+        <div class="hp-offer">
+          <img src="assets/14-groups/images/14-groups-og-900x536.webp" alt="Groups up to 14 people" class="hp-offer__image" loading="lazy">
+          <div class="hp-offer__body">
+            <h4 class="hp-offer__title">Groups (up to 14 people)</h4>
+            <p class="hp-offer__desc">Book easily for small groups. A world of fun tailored to every group's preferences and needs.</p>
+            <a href="https://feverup.com/m/584493" target="_blank" rel="noopener" class="btn btn-hp-primary hp-offer__cta">Secure your spot</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="hp-offer">
+          <img src="assets/14-groups/images/14-groups-og-900x536.webp" alt="Celebrations for 15 or more" class="hp-offer__image" loading="lazy">
+          <div class="hp-offer__body">
+            <h4 class="hp-offer__title">Celebrations (15+ people)</h4>
+            <p class="hp-offer__desc">Make your birthday or celebration unforgettable in a magical setting.</p>
+            <a href="https://groups.feverup.com/en/?id=142156&amp;bt=premium_services" target="_blank" rel="noopener" class="btn btn-hp-primary hp-offer__cta">Enquire</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="hp-offer">
+          <img src="assets/14-groups/images/14-groups-og-900x536.webp" alt="Student groups of 10 or more" class="hp-offer__image" loading="lazy">
+          <div class="hp-offer__body">
+            <h4 class="hp-offer__title">Student groups (10+ people)</h4>
+            <p class="hp-offer__desc">For schools, universities, camps and community centres. Reserve now, pay later.</p>
+            <a href="https://groups.feverup.com/en/?id=142156&amp;bt=educational" target="_blank" rel="noopener" class="btn btn-hp-primary hp-offer__cta">Enquire</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="hp-offer">
+          <img src="assets/14-groups/images/14-groups-og-900x536.webp" alt="Large individual groups of 15+" class="hp-offer__image" loading="lazy">
+          <div class="hp-offer__body">
+            <h4 class="hp-offer__title">Large groups (15+ people)</h4>
+            <p class="hp-offer__desc">Book effortlessly for a big group and get an experience tailored to every guest.</p>
+            <a href="https://groups.feverup.com/en/?id=142156&amp;bt=large_group" target="_blank" rel="noopener" class="btn btn-hp-primary hp-offer__cta">Enquire</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="hp-offer">
+          <img src="assets/14-groups/images/14-groups-og-900x536.webp" alt="Team building for 15 or more" class="hp-offer__image" loading="lazy">
+          <div class="hp-offer__body">
+            <h4 class="hp-offer__title">Team-buildings (15+ people)</h4>
+            <p class="hp-offer__desc">Host a team-building outing in a magical setting. Reserve now, pay later.</p>
+            <a href="https://groups.feverup.com/en/?id=142156&amp;bt=corporate" target="_blank" rel="noopener" class="btn btn-hp-primary hp-offer__cta">Enquire</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="hp-offer">
+          <img src="assets/14-groups/images/14-groups-og-900x536.webp" alt="Travel or event agencies of 15+" class="hp-offer__image" loading="lazy">
+          <div class="hp-offer__body">
+            <h4 class="hp-offer__title">Travel / event agencies (15+)</h4>
+            <p class="hp-offer__desc">Add exclusive private experiences to your offering. Custom spaces available.</p>
+            <a href="https://groups.feverup.com/en/?id=142156&amp;bt=agency" target="_blank" rel="noopener" class="btn btn-hp-primary hp-offer__cta">Enquire</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-------------------⬆ --- SECTION 14: GROUPS -- ⬆------------------->
+
+<!-------------------⬇ --- SECTION 15: GIFTCARD -- ⬇------------------->
+<section id="giftcard" class="hp-giftcard">
+  <div class="container hp-container-cap py-5">
+    <div class="row align-items-center g-4">
+      <div class="col-md-5 text-center">
+        <img src="assets/15-giftcard/images/15-giftcard-key-art-450x450.webp" alt="Forbidden Forest Experience gift card" class="hp-giftcard__image" width="450" height="450" loading="lazy">
+      </div>
+      <div class="col-md-7">
+        <h2 class="hp-giftcard__title">Giftcard</h2>
+        <p class="hp-giftcard__desc">The most magical gift is now available. Give someone a Gift Card to Harry Potter: A Forbidden Forest Experience.</p>
+        <a href="https://feverup.com/m/650083" target="_blank" rel="noopener" class="btn btn-hp-primary">Get your giftcard</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-------------------⬆ --- SECTION 15: GIFTCARD -- ⬆------------------->
+
+<!-------------------⬇ --- SECTION 16: REVIEWS -- ⬇------------------->
+<section id="reviews" class="hp-reviews">
+  <div class="container hp-container-cap py-5">
+    <h2 class="hp-section-title font-h2 text-center mb-2">Reviews</h2>
+    <p class="text-center mb-5"><img src="assets/00-universal/images/00-divider-flourish-312x34.svg" alt="" class="hp-flourish img-fluid"></p>
+
+    <!-- 5 reviewers — quotes are paraphrased summaries, see README -->
+    <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row row-cols-1 row-cols-md-3 g-4 px-md-5">
+            <div class="col">
+              <article class="hp-reviews__card">
+                <div class="hp-reviews__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="hp-reviews__text">Says it felt like walking through the story in person — already planning to come back next week.</p>
+                <p class="hp-reviews__name mt-auto">Ray K.</p>
+              </article>
+            </div>
+            <div class="col">
+              <article class="hp-reviews__card">
+                <div class="hp-reviews__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="hp-reviews__text">Calls it an awesome walk through the woods, praising the lighting, music and special effects.</p>
+                <p class="hp-reviews__name mt-auto">John D.</p>
+              </article>
+            </div>
+            <div class="col">
+              <article class="hp-reviews__card">
+                <div class="hp-reviews__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="hp-reviews__text">Loved how interactive it was and how many photo opportunities the trail offered.</p>
+                <p class="hp-reviews__name mt-auto">Rachel T.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row row-cols-1 row-cols-md-3 g-4 px-md-5">
+            <div class="col">
+              <article class="hp-reviews__card">
+                <div class="hp-reviews__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="hp-reviews__text">A magical outing the whole family enjoyed — the lighting and sound made it feel transporting.</p>
+                <p class="hp-reviews__name mt-auto">Joanna R.</p>
+              </article>
+            </div>
+            <div class="col">
+              <article class="hp-reviews__card">
+                <div class="hp-reviews__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="hp-reviews__text">Says it's well worth the money and the drive — a Forbidden Forest hard to beat.</p>
+                <p class="hp-reviews__name mt-auto">Lizzie K.</p>
+              </article>
+            </div>
+            <div class="col d-none d-md-block">
+              <article class="hp-reviews__card">
+                <div class="hp-reviews__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="hp-reviews__text">Reviewers consistently highlight the immersive lighting, the family-friendly pacing, and the little touches that make the world feel real.</p>
+                <p class="hp-reviews__name mt-auto">Visitor summary</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-indicators position-static mt-4">
+        <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Reviews slide 1"></button>
+        <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="1" aria-label="Reviews slide 2"></button>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+<!-------------------⬆ --- SECTION 16: REVIEWS -- ⬆------------------->
+
+<!-------------------⬇ --- SECTION 17: LOCATION -- ⬇------------------->
+<section id="location" class="hp-location">
+  <div class="container hp-container-cap py-5">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-5">
+        <h2 class="hp-location__title mb-3">
+          <a href="https://www.google.com/maps/search/Perth+Western+Australia" target="_blank" rel="noopener">Harry Potter: A Forbidden Forest Experience in Perth</a>
+        </h2>
+        <p class="mb-3"><img src="assets/00-universal/images/00-divider-flourish-312x34.svg" alt="" class="hp-flourish img-fluid"></p>
+        <address class="hp-location__address">Hedley Jorgensen Park, Crescent Rd, Kalamunda WA 6076, Australia</address>
+        <a class="btn-hp-underline" href="https://www.google.com/maps/place/Harry+Potter:+A+Forbidden+Forest+Experience+-+Perth/@-31.9678938,116.063324,15z" target="_blank" rel="noopener">Get directions</a>
+      </div>
+      <div class="col-lg-7">
+        <div class="hp-map-frame">
+          <iframe title="Map to Hedley Jorgensen Park, Kalamunda WA"
+                  src="https://www.google.com/maps?q=Hedley%20Jorgensen%20Park%2C%20Crescent%20Rd%2C%20Kalamunda%20WA%206076%2C%20Australia&output=embed"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-------------------⬆ --- SECTION 17: LOCATION -- ⬆------------------->
+
+<!-------------------⬇ --- SECTION 18: FAQS -- ⬇------------------->
+<section id="faqs" class="hp-faqs">
+  <div class="container hp-container-cap py-5">
+    <h2 class="hp-section-title font-h2 text-center mb-2">FAQs</h2>
+    <p class="text-center mb-4"><img src="assets/00-universal/images/00-divider-flourish-312x34.svg" alt="" class="hp-flourish img-fluid"></p>
+    <h3 class="font-h3 text-center mb-5">Do you need more information? You might find the answer here.</h3>
+
+    <!-- Answers below are paraphrased summaries of the live Perth FAQ (see README). -->
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <h4 class="hp-faqs__group-title">About the experience</h4>
+        <div class="accordion" id="faqAbout">
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqA1">What can I expect from the event?</button></h2>
+            <div id="faqA1" class="accordion-collapse collapse" data-bs-parent="#faqAbout"><div class="accordion-body">A nighttime walk along a lit outdoor trail with magical creatures, interactive spell moments, sound and lighting design inspired by the Forbidden Forest.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqA2">Where is the experience located?</button></h2>
+            <div id="faqA2" class="accordion-collapse collapse" data-bs-parent="#faqAbout"><div class="accordion-body">Hedley Jorgensen Park, Crescent Rd, Kalamunda WA 6076, Australia.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqA3">Is it indoor or outdoor?</button></h2>
+            <div id="faqA3" class="accordion-collapse collapse" data-bs-parent="#faqAbout"><div class="accordion-body">The experience is outdoors. If weather forces a cancellation you'll be notified by email at the address linked to your booking.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqA4">How long does it last?</button></h2>
+            <div id="faqA4" class="accordion-collapse collapse" data-bs-parent="#faqAbout"><div class="accordion-body">Most guests spend around 60–90 minutes on site.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqA5">Is food and drink available?</button></h2>
+            <div id="faqA5" class="accordion-collapse collapse" data-bs-parent="#faqAbout"><div class="accordion-body">Yes — food and drink are available on site, with vegan and gluten-free options.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqA6">Is there parking?</button></h2>
+            <div id="faqA6" class="accordion-collapse collapse" data-bs-parent="#faqAbout"><div class="accordion-body">Regular parking is at S&amp;R Orchard (about a 7-minute drive from the venue) with a free shuttle to the site.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqA7">Is there a dress code?</button></h2>
+            <div id="faqA7" class="accordion-collapse collapse" data-bs-parent="#faqAbout"><div class="accordion-body">Nothing formal — dressing up is encouraged but not required. Wear something suited to a woodland walk after dark.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqA8">Will it be scary?</button></h2>
+            <div id="faqA8" class="accordion-collapse collapse" data-bs-parent="#faqAbout"><div class="accordion-body">It's a family experience, though some moments may feel a little spooky. If anyone in your group has arachnophobia, please contact the team ahead of your visit.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <h4 class="hp-faqs__group-title">Tickets &amp; access</h4>
+        <div class="accordion" id="faqTickets">
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqT1">Where can I get tickets?</button></h2>
+            <div id="faqT1" class="accordion-collapse collapse" data-bs-parent="#faqTickets"><div class="accordion-body">Tickets are sold via the Fever app (Google Play / App Store) and on the Fever website.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqT2">Can I buy tickets at the door?</button></h2>
+            <div id="faqT2" class="accordion-collapse collapse" data-bs-parent="#faqTickets"><div class="accordion-body">There is a box office on site, but sessions can sell out. Booking in advance is strongly recommended.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqT3">Can I transfer my ticket?</button></h2>
+            <div id="faqT3" class="accordion-collapse collapse" data-bs-parent="#faqTickets"><div class="accordion-body">Yes — free ticket transfers are supported inside the Fever app.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqT4">Do I need to print my ticket?</button></h2>
+            <div id="faqT4" class="accordion-collapse collapse" data-bs-parent="#faqTickets"><div class="accordion-body">No — contactless tickets are validated straight from the Fever app.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqT5">Can I change my date or get a refund?</button></h2>
+            <div id="faqT5" class="accordion-collapse collapse" data-bs-parent="#faqTickets"><div class="accordion-body">Refunds and exchanges are allowed up to 48 hours before your booking. Contact Fever support if you need help.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqT6">Is there an age requirement?</button></h2>
+            <div id="faqT6" class="accordion-collapse collapse" data-bs-parent="#faqTickets"><div class="accordion-body">No minimum age, but since this is a lit trail at night some younger guests may find parts intense. Guests under 16 must be with an adult.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqT7">Under what age do kids enter free?</button></h2>
+            <div id="faqT7" class="accordion-collapse collapse" data-bs-parent="#faqTickets"><div class="accordion-body">Children under 3 enter free of charge.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqT8">Is the venue accessible?</button></h2>
+            <div id="faqT8" class="accordion-collapse collapse" data-bs-parent="#faqTickets"><div class="accordion-body">Yes — motorised scooters are available for hire at the trail entrance. It's a woodland path, so most of the surface is not hard. Guests requiring assistance can apply for one free carer pass.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-------------------⬆ --- SECTION 18: FAQS -- ⬆------------------->
+
+<!-------------------⬇ --- SECTION 09: FIREFLY EFFECT -- ⬇------------------->
+<section id="firefly-effect" class="hp-firefly-field" aria-hidden="true">
+  <div class="firefly"></div><div class="firefly"></div><div class="firefly"></div>
+  <div class="firefly"></div><div class="firefly"></div><div class="firefly"></div>
+  <div class="firefly"></div><div class="firefly"></div><div class="firefly"></div>
+</section>
+<!-------------------⬆ --- SECTION 09: FIREFLY EFFECT -- ⬆------------------->
+
+<!-------------------⬇ --- SECTION 10: FOOTER -- ⬇------------------->
+<footer id="footer" class="hp-footer text-center pt-5">
+  <div class="container hp-container-cap d-flex flex-column align-items-center gap-4 pt-5">
+    <img src="assets/00-universal/images/00-event-logo-stacked-944x610.svg" alt="Harry Potter: Forbidden Forest Experience" class="hp-footer__logo" width="232" height="150" loading="lazy">
+    <div>
+      <p class="hp-footer__partners-title mb-3">Presented by</p>
+      <div class="d-flex align-items-center justify-content-center gap-4">
+        <img src="assets/10-footer/images/10-partner-wb-150x155.png" alt="WB Logo" width="150" height="155" loading="lazy">
+        <img src="assets/10-footer/images/10-partner-fever-552x170.svg" alt="Fever Logo" width="150" height="46" loading="lazy">
+      </div>
+    </div>
+    <ul class="list-unstyled d-flex gap-4 mb-0">
+      <li>
+        <a href="https://www.facebook.com/HPforbiddenforestexperience/" target="_blank" rel="noopener nofollow" aria-label="Facebook">
+          <svg class="hp-social-icon" viewBox="0 0 320 512" role="img" aria-hidden="true"><path d="M80 299.3V512h116V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/hpforbiddenforestexperience/" target="_blank" rel="noopener nofollow" aria-label="Instagram">
+          <svg class="hp-social-icon" viewBox="0 0 448 512" role="img" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+        </a>
+      </li>
+    </ul>
+    <nav aria-label="Footer">
+      <ul class="list-unstyled d-flex flex-wrap justify-content-center gap-4 mb-0">
+        <li><a class="hp-footer__nav-link" href="https://support.feverup.com/hc/en-us/requests/new" target="_blank" rel="noopener">Contact</a></li>
+        <li><a class="hp-footer__nav-link" href="https://business.feverup.com/ambassadors-influencers/" target="_blank" rel="noopener">Influencers</a></li>
+        <li><a class="hp-footer__nav-link" href="mailto:press@hpforbiddenforestexperience.com">Press</a></li>
+        <li><a class="hp-footer__nav-link" href="https://business.feverup.com/affiliates/" target="_blank" rel="noopener">Affiliates</a></li>
+        <li><a class="hp-footer__nav-link" href="https://business.feverup.com/licensing/" target="_blank" rel="noopener">Licensing</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="hp-copyright mt-4">
+    <div class="container hp-container-cap">
+      <small>
+        WIZARDING WORLD characters, names, and related indicia are © &amp; ™ Warner Bros. Entertainment Inc. © &amp; ™ WBEI. Publishing Rights © JKR. FEVER is an original license © 2026
+        <a href="https://business.feverup.com/" target="_blank" rel="noopener">FEVER</a>
+        <a href="https://hpforbiddenforestexperience.com/" target="_blank" rel="noopener">Privacy Policy</a>
+      </small>
+    </div>
+  </div>
+</footer>
+<!-------------------⬆ --- SECTION 10: FOOTER -- ⬆------------------->
+
+<!-------------------⬇ --- SECTION 11: COOKIE BANNER -- ⬇------------------->
+<div class="hp-cookiebar alert alert-dismissible fade show mb-0 rounded-0 border-0" role="region" aria-label="Cookie notice">
+  <div class="container hp-container-cap d-flex flex-column flex-md-row align-items-md-center gap-3 py-2">
+    <p class="mb-0 flex-grow-1">We use cookies to enhance browsing experience, personalise ads and content, and collect statistics per our cookie policy. You can also revoke consent later via Cookie Settings.</p>
+    <button type="button" class="btn btn-outline-light btn-hp-cookie flex-shrink-0" data-bs-dismiss="alert">Cookies Settings</button>
+  </div>
+  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<!-------------------⬆ --- SECTION 11: COOKIE BANNER -- ⬆------------------->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!--  HELLO I AM NEW CODE -->
 </body>
-
 </html>
-
-<!---  HELLO I AM NEW CODE -->

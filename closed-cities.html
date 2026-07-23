@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<!-------------------⬇ --- SECTION 00: HEAD TAG DATA -- ⬇------------------->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--TITLE--> <title>This city is now closed — Harry Potter: A Forbidden Forest Experience</title>
+  <!--DESCRIPTION--> <meta name="description" content="Past cities of Harry Potter: A Forbidden Forest Experience. This trail has finished touring here — Perth is the currently available city.">
+  <!--ICON-->
+  <link rel="icon" type="image/x-icon" href="assets/00-universal/images/00-favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/00-universal/images/00-favicon-32-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/00-universal/images/00-favicon-16-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/00-universal/images/00-apple-touch-icon-180x180.png">
+  <link rel="mask-icon" href="assets/00-universal/images/00-safari-pinned-tab-500x500.svg" color="#ffffff">
+  <!--OPEN GRAPH-->
+  <meta property="og:title" content="This city is now closed — Harry Potter: A Forbidden Forest Experience">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/00-universal/images/00-og-image-2890x1722.jpg">
+  <!--STYLESHEETS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<!-------------------⬆ --- SECTION 00: HEAD TAG DATA -- ⬆------------------->
+
+<body>
+<!--
+  ============================== DEV TABLE OF CONTENTS (Closed cities) ==============================
+  SECTION 00  HEAD                     meta, favicons, stylesheets
+  SECTION 01  NAVBAR                   #navbar    — same black bar as index/perth
+  SECTION 19  CLOSED BANNER            #closed    — "This city is now closed" hero + explore-Perth CTA
+  SECTION 06  PAST EXPERIENCES         #finished-experiences — all 15 finished city tiles
+  SECTION 09  FIREFLY EFFECT           #firefly-effect
+  SECTION 10  FOOTER                   #footer
+  SECTION 11  COOKIE BANNER
+  ===================================================================================================
+  How the city name works:
+    ?city=Melbourne  →  title reads "Melbourne is now closed"
+    (no param)       →  falls back to "This city is now closed"
+  Set by inline JS at the bottom of Section 19; page also degrades safely without JS.
+-->
+
+<!-------------------⬇ --- SECTION 01: NAVBAR -- ⬇------------------->
+<header id="navbar">
+  <nav class="navbar fixed-top hp-navbar" aria-label="Main">
+    <div class="container-fluid hp-container-cap px-3">
+      <a class="navbar-brand py-0" href="index.html" aria-label="Go to homepage">
+        <img src="assets/00-universal/images/00-event-logo-stacked-944x610.svg" alt="Harry Potter: Forbidden Forest Experience" width="77" height="50">
+      </a>
+      <div class="dropdown hp-lang">
+        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">en</button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="https://hpforbiddenforestexperience.com/fr/" aria-label="Change language to French">fr</a></li>
+          <li><a class="dropdown-item" href="https://hpforbiddenforestexperience.com/nl/" aria-label="Change language to Dutch">nl</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-------------------⬆ --- SECTION 01: NAVBAR -- ⬆------------------->
+
+<main class="hp-closed">
+
+  <!-------------------⬇ --- SECTION 19: CLOSED BANNER -- ⬇------------------->
+  <section id="closed" class="hp-closed__banner">
+    <div class="container hp-container-cap">
+      <span class="hp-closed__badge">Finished</span>
+      <h1 class="hp-closed__title" id="closedTitle">This city is now closed</h1>
+      <p class="hp-closed__lede">The Forbidden Forest trail has finished its run in this city. Thank you to everyone who walked the trail with us here — over 2 million guests around the world have joined us so far.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="perth.html" class="btn btn-hp-primary">Explore Perth (open now)</a>
+        <a href="index.html#finished-experiences" class="btn-hp-underline">See all past cities</a>
+      </div>
+    </div>
+  </section>
+  <!-------------------⬆ --- SECTION 19: CLOSED BANNER -- ⬆------------------->
+
+  <!-------------------⬇ --- SECTION 06: PAST EXPERIENCES -- ⬇------------------->
+  <section id="finished-experiences" class="hp-city-panel">
+    <div class="container hp-container-cap py-5">
+      <h2 class="hp-section-title font-h2 text-center mb-4">All past experiences</h2>
+      <div class="row row-cols-2 row-cols-md-3 row-cols-xl-5 g-4 justify-content-center">
+
+        <div class="col">
+          <a class="hp-city__link d-flex flex-column gap-3 text-center" href="closed-cities.html?city=Austin">
+            <h3 class="hp-city__name font-h3 mb-0">Austin</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-austin-250x250.png" alt="Austin" class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </a>
+        </div>
+        <div class="col">
+          <a class="hp-city__link d-flex flex-column gap-3 text-center" href="closed-cities.html?city=Montauban">
+            <h3 class="hp-city__name font-h3 mb-0">Montauban</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-montauban-250x250.png" alt="Montauban" class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </a>
+        </div>
+        <div class="col">
+          <a class="hp-city__link d-flex flex-column gap-3 text-center" href="closed-cities.html?city=Leesburg">
+            <h3 class="hp-city__name font-h3 mb-0">Leesburg</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-leesburg-250x250.png" alt="Leesburg" class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </a>
+        </div>
+        <div class="col">
+          <a class="hp-city__link d-flex flex-column gap-3 text-center" href="closed-cities.html?city=Little+Elm%2C+TX">
+            <h3 class="hp-city__name font-h3 mb-0">Little Elm, TX</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-little-elm-250x250.png" alt="Little Elm, TX" class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </a>
+        </div>
+        <div class="col">
+          <a class="hp-city__link d-flex flex-column gap-3 text-center" href="closed-cities.html?city=Groenenberg">
+            <h3 class="hp-city__name font-h3 mb-0">Groenenberg</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-groenenberg-250x250.png" alt="Groenenberg" class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </a>
+        </div>
+        <div class="col">
+          <a class="hp-city__link d-flex flex-column gap-3 text-center" href="closed-cities.html?city=Cheshire">
+            <h3 class="hp-city__name font-h3 mb-0">Cheshire</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-cheshire-250x250.png" alt="Cheshire" class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </a>
+        </div>
+        <div class="col">
+          <a class="hp-city__link d-flex flex-column gap-3 text-center" href="closed-cities.html?city=Westchester%2C+NY">
+            <h3 class="hp-city__name font-h3 mb-0">Westchester, NY</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-westchester-250x250.png" alt="Westchester, NY" class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </a>
+        </div>
+        <div class="col">
+          <a class="hp-city__link d-flex flex-column gap-3 text-center" href="closed-cities.html?city=Singapore">
+            <h3 class="hp-city__name font-h3 mb-0">Singapore</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-singapore-250x250.png" alt="Singapore" class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </a>
+        </div>
+        <div class="col">
+          <a class="hp-city__link d-flex flex-column gap-3 text-center" href="closed-cities.html?city=Melbourne">
+            <h3 class="hp-city__name font-h3 mb-0">Melbourne</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-melbourne-250x250.png" alt="Melbourne" class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </a>
+        </div>
+        <div class="col">
+          <a class="hp-city__link d-flex flex-column gap-3 text-center" href="closed-cities.html?city=Brisbane">
+            <h3 class="hp-city__name font-h3 mb-0">Brisbane</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-brisbane-250x250.png" alt="Brisbane" class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </a>
+        </div>
+        <div class="col">
+          <a class="hp-city__link d-flex flex-column gap-3 text-center" href="closed-cities.html?city=Chicago">
+            <h3 class="hp-city__name font-h3 mb-0">Chicago</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-chicago-250x250.png" alt="Chicago" class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </a>
+        </div>
+        <div class="col">
+          <a class="hp-city__link d-flex flex-column gap-3 text-center" href="closed-cities.html?city=Cincinnati">
+            <h3 class="hp-city__name font-h3 mb-0">Cincinnati</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-cincinnati-250x250.png" alt="Cincinnati" class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </a>
+        </div>
+        <div class="col">
+          <a class="hp-city__link d-flex flex-column gap-3 text-center" href="closed-cities.html?city=Vancouver">
+            <h3 class="hp-city__name font-h3 mb-0">Vancouver</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-austin-250x250.png" alt="Vancouver" class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </a>
+        </div>
+        <div class="col">
+          <a class="hp-city__link d-flex flex-column gap-3 text-center" href="closed-cities.html?city=%E6%B7%B1%E5%9C%B3">
+            <h3 class="hp-city__name font-h3 mb-0">深圳</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-singapore-250x250.png" alt="Shenzhen" class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </a>
+        </div>
+        <div class="col">
+          <a class="hp-city__link d-flex flex-column gap-3 text-center" href="closed-cities.html?city=Santiago">
+            <h3 class="hp-city__name font-h3 mb-0">Santiago</h3>
+            <span class="hp-city__asset">
+              <span class="hp-city__status hp-city__status--finished">Finished</span>
+              <img src="assets/06-finished-experiences/images/06-city-groenenberg-250x250.png" alt="Santiago" class="img-fluid" width="250" height="250" loading="lazy">
+            </span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-------------------⬆ --- SECTION 06: PAST EXPERIENCES -- ⬆------------------->
+
+</main>
+
+<!-------------------⬇ --- SECTION 09: FIREFLY EFFECT -- ⬇------------------->
+<section id="firefly-effect" class="hp-firefly-field" aria-hidden="true">
+  <div class="firefly"></div><div class="firefly"></div><div class="firefly"></div>
+  <div class="firefly"></div><div class="firefly"></div><div class="firefly"></div>
+  <div class="firefly"></div><div class="firefly"></div><div class="firefly"></div>
+</section>
+<!-------------------⬆ --- SECTION 09: FIREFLY EFFECT -- ⬆------------------->
+
+<!-------------------⬇ --- SECTION 10: FOOTER -- ⬇------------------->
+<footer id="footer" class="hp-footer text-center pt-5">
+  <div class="container hp-container-cap d-flex flex-column align-items-center gap-4 pt-5">
+    <img src="assets/00-universal/images/00-event-logo-stacked-944x610.svg" alt="Harry Potter: Forbidden Forest Experience" class="hp-footer__logo" width="232" height="150" loading="lazy">
+    <div>
+      <p class="hp-footer__partners-title mb-3">Presented by</p>
+      <div class="d-flex align-items-center justify-content-center gap-4">
+        <img src="assets/10-footer/images/10-partner-wb-150x155.png" alt="WB Logo" width="150" height="155" loading="lazy">
+        <img src="assets/10-footer/images/10-partner-fever-552x170.svg" alt="Fever Logo" width="150" height="46" loading="lazy">
+      </div>
+    </div>
+    <ul class="list-unstyled d-flex gap-4 mb-0">
+      <li>
+        <a href="https://www.facebook.com/HPforbiddenforestexperience/" target="_blank" rel="noopener nofollow" aria-label="Facebook">
+          <svg class="hp-social-icon" viewBox="0 0 320 512" role="img" aria-hidden="true"><path d="M80 299.3V512h116V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/hpforbiddenforestexperience/" target="_blank" rel="noopener nofollow" aria-label="Instagram">
+          <svg class="hp-social-icon" viewBox="0 0 448 512" role="img" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+        </a>
+      </li>
+    </ul>
+    <nav aria-label="Footer">
+      <ul class="list-unstyled d-flex flex-wrap justify-content-center gap-4 mb-0">
+        <li><a class="hp-footer__nav-link" href="https://support.feverup.com/hc/en-us/requests/new" target="_blank" rel="noopener">Contact</a></li>
+        <li><a class="hp-footer__nav-link" href="https://business.feverup.com/ambassadors-influencers/" target="_blank" rel="noopener">Influencers</a></li>
+        <li><a class="hp-footer__nav-link" href="mailto:press@hpforbiddenforestexperience.com">Press</a></li>
+        <li><a class="hp-footer__nav-link" href="https://business.feverup.com/affiliates/" target="_blank" rel="noopener">Affiliates</a></li>
+        <li><a class="hp-footer__nav-link" href="https://business.feverup.com/licensing/" target="_blank" rel="noopener">Licensing</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="hp-copyright mt-4">
+    <div class="container hp-container-cap">
+      <small>
+        WIZARDING WORLD characters, names, and related indicia are © &amp; ™ Warner Bros. Entertainment Inc. © &amp; ™ WBEI. Publishing Rights © JKR. FEVER is an original license © 2026
+        <a href="https://business.feverup.com/" target="_blank" rel="noopener">FEVER</a>
+        <a href="https://hpforbiddenforestexperience.com/" target="_blank" rel="noopener">Privacy Policy</a>
+      </small>
+    </div>
+  </div>
+</footer>
+<!-------------------⬆ --- SECTION 10: FOOTER -- ⬆------------------->
+
+<!-------------------⬇ --- SECTION 11: COOKIE BANNER -- ⬇------------------->
+<div class="hp-cookiebar alert alert-dismissible fade show mb-0 rounded-0 border-0" role="region" aria-label="Cookie notice">
+  <div class="container hp-container-cap d-flex flex-column flex-md-row align-items-md-center gap-3 py-2">
+    <p class="mb-0 flex-grow-1">We use cookies to enhance browsing experience, personalise ads and content, and collect statistics per our cookie policy. You can also revoke consent later via Cookie Settings.</p>
+    <button type="button" class="btn btn-outline-light btn-hp-cookie flex-shrink-0" data-bs-dismiss="alert">Cookies Settings</button>
+  </div>
+  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<!-------------------⬆ --- SECTION 11: COOKIE BANNER -- ⬆------------------->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+  // Read ?city= from the URL and update the banner heading + page title.
+  // Rejects anything but letters, spaces, commas and CJK ideographs so we can
+  // safely drop the value into text/title without HTML-escaping.
+  (function () {
+    var raw = new URLSearchParams(location.search).get('city');
+    if (!raw) return;
+    var name = raw.slice(0, 40).replace(/[^\p{L}\p{M}\s,.\-]/gu, '').trim();
+    if (!name) return;
+    var el = document.getElementById('closedTitle');
+    if (el) el.textContent = name + ' is now closed';
+    document.title = name + ' is now closed — Harry Potter: A Forbidden Forest Experience';
+  })();
+</script>
+</body>
+</html>
