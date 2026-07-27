@@ -2,6 +2,8 @@
 ## Bootstrap Clone A Website Activity
 ### by [Tim Daly](https://thedalycreative.com)
 
+RANDOM UPDATE!!!!!
+
 ![HTML5](assets/styleguide/badges/html5.svg) ![CSS3](assets/styleguide/badges/css3.svg) ![Bootstrap 5](assets/styleguide/badges/bootstrap5.svg)
 
 ![Forbidden Forest Animated Banner](assets/styleguide/forbidden-forest-preview.gif)
