@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# The original browser save + fetched third-party assets.
+# Kept locally as an archive per clone-prompt.md; not for the public repo.
+_raw/
+
+# Playwright MCP scratch
+.playwright-mcp/
+
+# Node / Vercel
+node_modules/
+.vercel/
